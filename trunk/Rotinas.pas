@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, IniFiles, DB, WinProcs, Menus, ExtCtrls, Printers, Mask, DBXpress, MMSystem, 
+  StdCtrls, IniFiles, DB, WinProcs, Menus, ExtCtrls, Printers, Mask, DBXpress, MMSystem,
+  cxButtons, dxStatusBar, CxGroupBox, cxLabel, cxCheckBox, cxTextEdit, cxMaskEdit,
   NFe_Util_2G_TLB ; // acrescentar essa linha no use da unit para NF-E DLL;
 
 ///// Funções para Auxilio
@@ -21,12 +22,15 @@ uses
    Function Msg(Mensagem, TipoMsg: String): Boolean;
 
 ///// Validações
-   PROCEDURE CAIXAABERTO;
-   PROCEDURE CONTABAIXA;
-   FUNCTION VALIDAUF(Dado : string) : boolean;
-   FUNCTION VALIDACNPJ(Dado : string) : boolean;
-   FUNCTION VALIDACPF(Dado : string) : boolean;
-   FUNCTION DIGITOCODIGODEBAR(EREFERENCIA:string):integer;
+   PROCEDURE   VALIDACAMPOTAG(Form: TForm);
+   PROCEDURE   CAIXAABERTO;
+   PROCEDURE   CONTABAIXA;
+   FUNCTION    VALIDAUF(Dado : string) : boolean;
+   FUNCTION    VALIDACNPJ(Dado : string) : boolean;
+   FUNCTION    VALIDACPF(Dado : string) : boolean;
+   FUNCTION    DIGITOCODIGODEBAR(EREFERENCIA:string):integer;
+   FUNCTION    CONTAUSUARIOLOGADO(): Integer;
+   FUNCTION    VERIFICAVALIDADEDALICENCA(empresa, cnpj, dataexpira, terminais, palavrasecreta:string): Boolean;
 
 ///// Funções de Arquivos
    FUNCTION leini(arq,secao,chave:String):String;
@@ -44,6 +48,7 @@ uses
 
 ///// Funções de controle
    procedure PFundo(mostra: integer);
+   procedure CarregaLyoutForm(Form: TForm);
 
 ///// Datas
    FUNCTION DataValida(const S: string): boolean;
@@ -65,7 +70,8 @@ uses
 
 var
    Usuario, wDrbAtivo, CAMPOPROD,
-   StrTipoConta, wEmpresa, NOME  : String;
+   StrTipoConta, StrTipoPedido,
+   wEmpresa, NOME                : String;
    intCaixa, CODIGO              : Integer;
    FormAtivo                     : TForm;
    FCorSelec, FCorLista          : TColor;
@@ -75,7 +81,25 @@ var
 implementation
 
 uses uPrinc, udmCad, SqlExpr, udmFinanceiro, UCBase, udmRel, uListagens,
-  ucad_Mesa, uFinanceiro, uFaturamento, uEstoque, uMsg;
+  ucad_Mesa, uFinanceiro, uFaturamento, uEstoque, uMsg, uLiberacao,
+  DateUtils;
+
+   type
+      TEditBalloonTip = packed record
+      cbStruct: DWORD ;
+      pszTitle: LPCWSTR ;
+      pszText: LPCWSTR;
+      ttiIcon: Integer;
+   end;
+
+const
+   ECM_FIRST = $1500;
+   EM_SHOWBALLOONTIP = (ECM_FIRST + 3);
+   EM_HIDEBALLOONTIP = (ECM_FIRST + 4);
+   TTI_NONE = 0;
+   TTI_INFO = 1;
+   TTI_WARNING = 2;
+   TTI_ERROR = 3;
 
 procedure PFundo(mostra: integer);
 begin
@@ -1034,6 +1058,189 @@ begin
       Result             := False;
    FMsg.Free;
    FMsg := nil;
+end;
+
+Function CONTAUSUARIOLOGADO():integer;
+begin
+   dmCad.qryAux.close;
+   dmcad.qryAux.CommandText := 'select count(mon$user) from Mon$attachments';
+   dmcad.qryAux.Open;
+
+   Result := dmcad.qryAux.FieldbyName('COUNT').asInteger;
+end;
+
+FUNCTION VerificaValidadeDaLicenca(empresa, cnpj, dataexpira, terminais, palavrasecreta: string): Boolean;
+begin
+   if (dmcad.cdsCOnfRAZAOEMP.asString            <> empresa) or
+      (dmcad.cdsCOnfCNPJEMP.asString             <> cnpj) or
+      (dmcad.cdsCOnfVALIDADELIC.AsString         <> dataexpira) or
+      (strtoInt(dmcad.cdsCOnfQTDELIC.asString)   <> StrToint(terminais)) or
+      ('RBDANILOSISTEMAS'                        <> palavrasecreta) then
+      begin
+         Msg('0209 - Licença Inválida, Contate Suporte', 'I');
+
+         dmcad.cdsConf.Edit;
+         dmcad.cdsCOnfVALIDADELIC.AsString := '';
+         dmcad.cdsCOnfQTDELIC.AsString     := '';
+         dmcad.cdsConf.Post;
+         dmcad.cdsConf.ApplyUpdates(0);
+
+         FormLibera := TFormLibera.Create(FormLibera);
+         FormLibera.ShowModal;
+      end;
+end;
+
+procedure CarregaLyoutForm(Form: TForm);
+var
+   j: integer;
+   CorFonte, CorFundo: TColor;
+   NomeFonte, NomeSkin: String;
+begin
+   CorFonte := clMaroon;    //
+   CorFundo := FCorLista;  //$00F1EDE9
+   NomeFonte:= 'Tahoma';
+   NomeSkin := EmptyStr;
+
+   with Form do
+   begin
+      for j := 0 to ComponentCount - 1 do
+      begin
+         if (Components[j] is TcxButton) then
+         begin
+            (Components[j] as TcxButton).Colors.DefaultText              := CorFonte;
+            (Components[j] as TcxButton).Colors.DisabledText             := CorFonte;
+            (Components[j] as TcxButton).Colors.HotText                  := CorFonte;
+            (Components[j] as TcxButton).Colors.NormalText               := CorFonte;
+            (Components[j] as TcxButton).Colors.PressedText              := CorFonte;
+            (Components[j] as TcxButton).LookAndFeel.NativeStyle         := True;
+            (Components[j] as TcxButton).SpeedButtonOptions.Transparent  := True;
+            (Components[j] as TcxButton).SpeedButtonOptions.CanBeFocused := False;
+            //(Components[j] as TcxButton).LookAndFeel.Kind                := lfOffice11;
+         end;
+
+         if (Components[j] is Tpanel) then
+         begin
+            (Components[j] as Tpanel).Font.Color                         := CorFonte;
+            (Components[j] as TPanel).Color                              := CorFundo;
+            (Components[j] as TPanel).BevelOuter                         := bvNone;
+         end;
+
+         if (Components[j] is TdxStatusBar) then
+         begin
+            (Components[j] as TdxStatusBar).PaintStyle                   := stpsFlat;
+            (Components[j] as TdxStatusBar).LookAndFeel.SkinName         := NomeSkin;
+            (Components[j] as TdxStatusBar).Color                        := CorFundo;
+            (Components[j] as TdxStatusBar).LookAndFeel.NativeStyle      := true;
+            (Components[j] as TdxStatusBar).Font.Color                   := CorFonte;
+            (Components[j] as TdxStatusBar).Font.Name                    := NomeFonte;
+         end;
+
+         if (Components[j] is TCxGroupBox) then
+         begin
+            (Components[j] as TCxGroupBox).Style.AssignedValues            := [1];
+            (Components[j] as TCxGroupBox).LookAndFeel.SkinName            := NomeSkin;
+            (Components[j] as TCxGroupBox).Style.LookAndFeel.SkinName      := NomeSkin;
+            (Components[j] as TCxGroupBox).PanelStyle.Active               := True;
+            (Components[j] as TCxGroupBox).PanelStyle.OfficeBackgroundKind := pobkStyleColor;
+            (Components[j] as TCxGroupBox).Style.Color                     := CorFundo;
+            (Components[j] as TCxGroupBox).LookAndFeel.NativeStyle         := true;
+            (Components[j] as TCxGroupBox).Transparent                     := False;
+            (Components[j] as TCxGroupBox).Style.Edges                     := [];
+
+         end;
+
+         if (Components[j] is TcxLabel) then
+         begin
+            (Components[j] as TcxLabel).Style.Color                   := CorFundo;
+            (Components[j] as TcxLabel).Style.Font.Color              := CorFonte;
+            (Components[j] as TcxLabel).Style.Font.Name               := NomeFonte;
+            (Components[j] as TcxLabel).Transparent                   := true;
+            (Components[j] as TcxLabel).Style.LookAndFeel.NativeStyle := True;
+            (Components[j] as TcxLabel).Style.LookAndFeel.SkinName    := NomeSkin;
+         end;
+
+         if (Components[j] is TcxCheckBox) then
+         begin
+            (Components[j] as TcxCheckBox).Style.Color                   := CorFundo;
+            (Components[j] as TcxCheckBox).Style.Font.Color              := CorFonte;
+            (Components[j] as TcxCheckBox).Style.Font.Name               := NomeFonte;
+            (Components[j] as TcxCheckBox).Transparent                   := true;
+            (Components[j] as TcxCheckBox).Style.LookAndFeel.NativeStyle := True;
+            (Components[j] as TcxCheckBox).Style.LookAndFeel.SkinName    := NomeSkin;
+         end;
+      end;
+   end;
+   //edImage.Picture.LoadFromFile(ExtractFilePath(Application.ExeName)+'\immagini\Foto.png');
+end;
+
+
+Procedure ValidaCAmpoTag(Form: TForm);
+var
+   i, intPassou: integer;
+   StrMsg, StrCorrige, StrPreenche : String;
+begin
+   with Form do
+   begin
+      for i := 0 to ComponentCount-1 do
+      begin
+         if ((Components[i] is TcxTextEdit)) then
+         begin
+            if ((Components[i] as TcxTextEdit).Tag > 0) then
+               (Components[i] as TcxTextEdit).Style.Color := clWhite;
+
+            if ((Components[i] as TcxTextEdit).Tag = 1) and ((Components[i] as TcxTextEdit).Text = '') then
+            begin
+               (Components[i] as TcxTextEdit).Style.Color := $00BFBFFF;
+               StrPreenche := StrPreenche + '-> '+(Components[i] as TcxTextEdit).Hint+#13;
+               intPassou := intPassou + 1;
+            end;
+
+            if ((Components[i] as TcxTextEdit).Tag = 2) and (Pos('@', (Components[i] as TcxTextEdit).Text) = 0) then
+            begin
+               (Components[i] as TcxTextEdit).Style.Color := $00BFBFFF;
+               StrCorrige := StrCorrige + '-> '+(Components[i] as TcxTextEdit).Hint+#13;
+               intPassou := intPassou + 1;
+            end;
+
+            if intPassou = 1 then
+            begin
+               (Components[i] as TcxTextEdit).SetFocus;
+               intPassou := 2;
+            end;
+         end;
+
+         if ((Components[i] is TcxMaskEdit)) then
+         begin
+            if ((Components[i] as TcxMaskEdit).Tag = 1) then
+               (Components[i] as TcxMaskEdit).Style.Color := clWhite;
+
+            if ((Components[i] as TcxMaskEdit).Tag = 1) and ((Components[i] as TcxMaskEdit).Text = '') then
+            begin
+               (Components[i] as TcxMaskEdit).Style.Color := $00BFBFFF;
+               StrPreenche := StrPreenche + '-> '+(Components[i] as TcxMaskEdit).Hint+#13;
+               intPassou := intPassou + 1;
+            end;
+
+            if intPassou = 1 then
+            begin
+               (Components[i] as TcxMaskEdit).SetFocus;
+               intPassou := 2;
+            end;
+         end;
+
+      end;
+   end; // with
+
+   if StrPreenche <> '' then
+      StrMsg := 'Preencha os Campos Obrigatórios. '+#13+StrPreenche+#13;
+   if StrCorrige  <> '' then
+      StrMsg := StrMsg + 'Corrija os Campos abaixo. '+#13+StrCorrige;
+
+   if intPassou > 0 then
+   begin
+      Msg(StrMsg,'I');
+      abort;
+   end;
 end;
 
 end.

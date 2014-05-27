@@ -304,6 +304,7 @@ end;
 
 procedure TFcad_Vendedor.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcad_Vendedor);
    MudaPainel(0); // Cadastro
    indice := 'IDVEND';
    cbORdem.ItemIndex := 0; // Codigo;

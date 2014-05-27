@@ -1211,9 +1211,10 @@ object Fcad_Prod: TFcad_Prod
       Style = 11
       TabOrder = 1
       TabWidth = 100
-      ClientRectBottom = 183
-      ClientRectRight = 937
-      ClientRectTop = 20
+      ClientRectBottom = 177
+      ClientRectLeft = 6
+      ClientRectRight = 931
+      ClientRectTop = 29
       object cxVenda: TcxTabSheet
         Caption = 'Dados Venda'
         ImageIndex = 0
@@ -2305,7 +2306,17 @@ object Fcad_Prod: TFcad_Prod
       Left = 2
       Top = 2
       Align = alTop
-      Style.BorderStyle = ebsUltraFlat
+      PanelStyle.Active = True
+      ParentColor = False
+      Style.LookAndFeel.NativeStyle = True
+      Style.LookAndFeel.SkinName = ''
+      Style.TransparentBorder = False
+      StyleDisabled.LookAndFeel.NativeStyle = True
+      StyleDisabled.LookAndFeel.SkinName = ''
+      StyleFocused.LookAndFeel.NativeStyle = True
+      StyleFocused.LookAndFeel.SkinName = ''
+      StyleHot.LookAndFeel.NativeStyle = True
+      StyleHot.LookAndFeel.SkinName = ''
       TabOrder = 1
       Height = 79
       Width = 937

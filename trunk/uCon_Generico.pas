@@ -226,6 +226,7 @@ end;
 
 procedure TFcon_Generico.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcon_Generico);
    if TABELA='' then
       TABELA:='GRUPOS';
    if FormAtivo = NIL then

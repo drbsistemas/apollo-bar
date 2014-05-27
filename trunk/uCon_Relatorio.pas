@@ -137,6 +137,7 @@ end;
 
 procedure TFcon_Relatorio.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(FCon_Relatorio);   
    BuscaIndice(1);
 end;
 

@@ -27,19 +27,6 @@ type
   TFcad_Cliente = class(TForm)
     pnCad: TcxGroupBox;
     pnCon: TcxGroupBox;
-    pnConsulta: TcxGroupBox;
-    cxLabel1: TcxLabel;
-    cxLabel2: TcxLabel;
-    eConsulta: TcxTextEdit;
-    cxLabel3: TcxLabel;
-    cbAtivo: TcxComboBox;
-    btnCon: TcxButton;
-    cxNovo: TcxButton;
-    cxEditar: TcxButton;
-    cxVisualiza: TcxButton;
-    cxApaga: TcxButton;
-    cxPrint: TcxButton;
-    cxSair: TcxButton;
     grConsulta: TcxGrid;
     grConsultaDBTableView1: TcxGridDBTableView;
     grConsultaDBTableView1IDCLIE: TcxGridDBColumn;
@@ -103,6 +90,19 @@ type
     cxLabel4: TcxLabel;
     eNum: TcxMaskEdit;
     eIbge: TcxMaskEdit;
+    Panel1: TPanel;
+    cxLabel1: TcxLabel;
+    cxLabel2: TcxLabel;
+    eConsulta: TcxTextEdit;
+    cxLabel3: TcxLabel;
+    cbAtivo: TcxComboBox;
+    btnCon: TcxButton;
+    cxNovo: TcxButton;
+    cxEditar: TcxButton;
+    cxVisualiza: TcxButton;
+    cxApaga: TcxButton;
+    cxPrint: TcxButton;
+    cxSair: TcxButton;
     cxQtdeReg: TcxLabel;
     cxMov: TcxButton;
     cbOrdem: TcxComboBox;
@@ -165,7 +165,7 @@ procedure TFcad_Cliente.FormClose(Sender: TObject;
 begin
    if pncad.Visible = true then
    begin
-      MessageDlg('O registro esta em modo de cadastro, não pode ser fechado!', mtWarning, [mbOK], 0);
+      Msg('O registro esta em modo de cadastro, não pode ser fechado!', 'I');
       abort;
    end;
    PFundo(1);
@@ -198,6 +198,7 @@ end;
 
 procedure TFcad_Cliente.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcad_Cliente);
    FormAtivo     := Fcad_Cliente;
    MudaPainel(0); // Consulta
    indice        := 'RAZAO';
@@ -269,7 +270,7 @@ begin
    if cbDtNascimento.Text <>'' then
       if (not DataValida(cbDtNascimento.Text)) or (cbDtNascimento.Date >= Date) then
       begin
-         MessageDlg('A data digitada não é válida!', mtWarning, [mbOK], 0);
+         Msg('A data digitada não é válida!', 'I');
          cbDtNascimento.Clear;
       end;
 end;
@@ -372,17 +373,17 @@ begin
    SistemaLiberado;
    if (dmCad.cdsClie.Active = false) or (dmCad.cdsClie.RecordCount<1) then
    begin
-      MessageDlg('Não há registros identificados, verifique!', mtInformation, [mbOK], 0);
+      Msg('Não há registros identificados, verifique!', 'I');
       abort;
    end;
-   if (MessageBox(0, 'Tem certeza que deseja apagar este registro?', 'Apagar?', MB_ICONINFORMATION or MB_YESNO or MB_TASKMODAL or MB_DEFBUTTON2) = idNo) then
+   if Msg('Tem certeza que deseja apagar este registro?', 'P') then
       abort;
    try
       dmCad.cdsClie.Delete;
       dmCad.cdsClie.ApplyUpdates(0);
    except
       dmCad.cdsClie.CancelUpdates;
-      MessageDlg('Não foi possível apagar este registro, tente novamente!', mtInformation, [mbOK], 0);
+      Msg('Não foi possível apagar este registro, tente novamente!', 'I');
    end;
 end;
 
@@ -397,7 +398,7 @@ begin
    SistemaLiberado;
    if (dmCad.cdsCLie.Active = false) or (dmcad.CdsClie.RecordCount<1) then
    begin
-      MessageDlg('Não há registros identificados, verifique!', mtInformation, [mbOK], 0);
+      Msg('Não há registros identificados, verifique!', 'I');
       abort;
    end;
    MudaPainel(1); // Cadastro
@@ -408,7 +409,7 @@ end;
 
 procedure TFcad_Cliente.cxDesistirClick(Sender: TObject);
 begin
-   if (MessageBox(0, 'Deseja realmente desistir?', 'Desistir?', MB_ICONINFORMATION or MB_YESNO or MB_TASKMODAL or MB_DEFBUTTON2) = idNo) then
+   if not Msg('Deseja realmente desistir?', 'P') then
       abort;
    if cxSalvar.Tag=1 then
       dmcad.cdsClie.CancelUpdates;
@@ -470,7 +471,7 @@ end;
 procedure TFcad_Cliente.cxSalvarClick(Sender: TObject);
 begin
 ///// Validações
-   Validacoes;
+   ValidaCampoTag(Fcad_Cliente);
 
    if cxSalvar.Tag=0 then
       dmCad.cdsClie.Edit;
@@ -514,7 +515,7 @@ begin
    if eUf.Text<>'' then
    if (not VALIDAUF(eUf.text)) then
    begin
-      ShowMessage('UF Não Aceito');
+      Msg('UF Não Aceito','I');
       eUf.SetFocus;
    end;
 end;
@@ -534,7 +535,7 @@ begin
    eIBGE.Text := BuscaNomeStr('MUNICIPIOIBGE', eCidade.Text);
    If eIBGE.Text = 'ERRO' then
    begin
-      MessageDlg('Cidade inválida, verifique!', mtError, [mbOK], 0);
+      Msg('Cidade inválida, verifique!', 'I');
       eIBGE.CLear;
       Abort;
    end;
@@ -542,7 +543,7 @@ end;
 
 procedure TFcad_Cliente.cxMovClick(Sender: TObject);
 begin
-   MessageDlg('Em Desenvolvimento!', mtWarning, [mbOK], 0);
+   Msg('Em Desenvolvimento!', 'I');
 end;
 
 procedure TFcad_Cliente.Validacoes;
@@ -555,7 +556,7 @@ procedure TFcad_Cliente.eCidadePropertiesButtonClick(Sender: TObject;
 begin
    if (eUf.Text='') then
    begin
-      MessageDlg('Selecione uma UF válida!', mtWarning, [mbOK], 0);
+      Msg('Selecione uma UF válida!', 'I');
       eUf.Text;
       abort;
    end;
@@ -593,7 +594,7 @@ begin
    if eCpf.Text<>'' then
    if (not VALIDACPF(eCPF.text)) then
    begin
-      ShowMessage('CPF Não Aceito');
+      Msg('CPF Não Aceito','I');
       eCpf.SetFocus;
    end;
 end;
@@ -603,7 +604,7 @@ begin
    if eCNPJ.Text<>'' then
    if (not VALIDACNPJ(eCNPJ.text)) then
    begin
-      ShowMessage('CNPJ Não Aceito');
+      Msg('CNPJ Não Aceito','I');
       eCNPJ.SetFocus;
    end;
 end;

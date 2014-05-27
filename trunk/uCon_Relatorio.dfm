@@ -96,6 +96,10 @@ object Fcon_Relatorio: TFcon_Relatorio
     Top = 0
     Align = alLeft
     PanelStyle.Active = True
+    Style.LookAndFeel.SkinName = ''
+    StyleDisabled.LookAndFeel.SkinName = ''
+    StyleFocused.LookAndFeel.SkinName = ''
+    StyleHot.LookAndFeel.SkinName = ''
     TabOrder = 1
     Height = 540
     Width = 202

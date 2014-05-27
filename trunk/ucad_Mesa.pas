@@ -394,6 +394,7 @@ end;
 procedure TFcad_Mesa.FormShow(Sender: TObject);
 begin
    FormAtivo     := Fcad_Mesa;
+   CarregaLyoutForm(Fcad_Mesa);
    VerificaMesas;
    NomeiaPainel;
    MudaPainel(0); // Consultade Mesas

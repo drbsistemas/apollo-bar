@@ -2,7 +2,7 @@ unit uPrinc;
 
 interface
 
-uses
+uses                
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, dxGDIPlusClasses, ExtCtrls, Menus, ComCtrls,
   cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters,
@@ -18,8 +18,9 @@ uses
   dxSkinsdxStatusBarPainter, dxStatusBar, cxContainer, cxEdit, cxImage,
   StdCtrls, cxButtons, WinSkinData, dxSkinsdxBarPainter, dxBar, cxClasses,
   cxButtonEdit, cxBarEditItem, dxRibbon, cxGroupBox, dxsbar, cxHint,
-  UCIdle, UCBase, UCDataConnector, UCDBXConn, RLConsts;
-
+  UCIdle, UCBase, UCDataConnector, RLConsts, TypInfo, pngimage,
+  cxPC, pngextra, UCDBXConn;
+                    
 type
   TFPrinc = class(TForm)
     pnTop: TPanel;
@@ -29,7 +30,6 @@ type
     N1: TMenuItem;
     Cadastro1: TMenuItem;
     stHint: TPanel;
-    UCDBXConn1: TUCDBXConn;
     StatusBar1: TdxStatusBar;
     pnImg2: TcxImage;
     pnimg: TcxImage;
@@ -41,7 +41,6 @@ type
     cxClientes: TcxButton;
     cxProd: TcxButton;
     cxBalcao: TcxButton;
-    cxMesas: TcxButton;
     cxConta: TcxButton;
     cxReceber: TcxButton;
     cxPagar: TcxButton;
@@ -61,13 +60,14 @@ type
     Password1: TMenuItem;
     UCApplicationMessage1: TUCApplicationMessage;
     Historico1: TMenuItem;
-    UCIdle1: TUCIdle;
     cxCompras: TcxButton;
     cxPedido: TcxButton;
     cxOrcamento: TcxButton;
     cxBalanco: TcxButton;
-    cxButton1: TcxButton;
+    cxVendedores: TcxButton;
     ConsultadeVendedores1: TMenuItem;
+    cxMesas: TcxButton;
+    UCDBXConn1: TUCDBXConn;
     ///// Privados
     procedure ShowHint(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -96,10 +96,13 @@ type
     procedure cxPagarClick(Sender: TObject);
     procedure cxBalancoClick(Sender: TObject);
     procedure cxMesasClick(Sender: TObject);
-    procedure cxButton1Click(Sender: TObject);
+    procedure cxVendedoresClick(Sender: TObject);
     procedure cxBalcaoClick(Sender: TObject);
     procedure ConsultadeVendedores1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure PegaNomeForm(var Msg: TMsg; var Handled: Boolean);
+    procedure cxPedidoClick(Sender: TObject);
+    procedure cxOrcamentoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -114,7 +117,7 @@ implementation
 uses udmCad, uSobre, Rotinas, uCad_Cliente, uCad_Empresa, uLiberacao,
   uCon_ItemPar, uCad_Prod, uCon_Generico, uCon_Prod, uCon_Clie,
   uCon_Relatorio, uCad_Caixa, uCad_Conta, uCad_Balanco, ucad_Mesa,
-  uCad_Vendedor, uCad_Venda;
+  uCad_Vendedor, uCad_Venda, uCad_Pedido;
 
 {$R *.dfm}
 
@@ -130,16 +133,15 @@ procedure TFPrinc.FormShow(Sender: TObject);
 var
    j: integer;
 begin
-///// Parametriza dados simples
    FCorSelec := $0097E6FD;
-   FCorLista := $00F1EDE9;
+   FCorLista := clBtnFace;//$0000002D; //$00F1EDE9;
+
+   CarregaLyoutForm(Fprinc);
+///// Parametriza dados simples
    Application.OnHint := ShowHint;
    FPrinc.OnResize(self);
 
    FPrinc.StatusBar1.Panels[0].Text := 'Empresa: '+dmcad.cdsConfRAZAOEMP.AsString;
-///// Abre os PArametros (NAO DAR CLOSE EM NENHUM MOMENTO)
-   if not dmcAd.cdsItemConf.Active=true then
-      dmCad.cdsConf.ACtive:=true;
 
 //// VErifica Backup
    if dmcad.cdsConfDATABACKUP.AsDatetime <= (Now - 3) then
@@ -150,6 +152,7 @@ begin
       pnImg.Picture.LoadFromFile(dmCad.cdsConfPASTASERVIDOR.ASString +'\immagini\presto.png');
       pnImg2.Picture.LoadFromFile(dmCad.cdsConfPASTASERVIDOR.ASString +'\immagini\presto_.png');
    except
+      Msg('Imagem "Presto.png e Presto_.png" não encontradas, verifique!','I');
    end;
 
 ///// Deixa os botoes sem bordas  (retirado por enquanto para ficar mais visual)
@@ -323,7 +326,7 @@ begin
    ExecutaForm(TFcad_Mesa, Fcad_Mesa);
 end;
 
-procedure TFPrinc.cxButton1Click(Sender: TObject);
+procedure TFPrinc.cxVendedoresClick(Sender: TObject);
 begin
    Fcad_Vendedor := TFcad_Vendedor.Create(self);
    Fcad_Vendedor.AbreCOm('CAD');
@@ -345,10 +348,43 @@ end;
 
 procedure TFPrinc.FormCreate(Sender: TObject);
 begin
+///// Abre os PArametros (NAO DAR CLOSE EM NENHUM MOMENTO)
+   if not dmcAd.cdsItemConf.Active=true then
+      dmCad.cdsConf.ACtive:=true;
+
+   FormAtivo := Nil;
    UserControl1.StartLogin;
+   Application.OnMessage := PegaNomeForm;
 end;
+
 ///// FOrtes Reports com versão diferente;
+procedure TFPrinc.PegaNomeForm(var Msg: TMsg; var Handled: Boolean);
+var
+   Rect: TRect;
+   TD: PTypeData;
+begin
+   if (msg.message = VK_SHIFT) and (msg.Message = WM_RBUTTONDOWN) then
+   begin
+      TD := GetTypeData(Screen.ActiveForm.ClassInfo);
+      ShowMessage('Titulo: '+Screen.ActiveForm.Caption +#13+
+          'Form.: '+Screen.ActiveForm.Name+#13+
+          'Unit...:'+TD^.UnitName);
+   end;
+end;
+
+procedure TFPrinc.cxPedidoClick(Sender: TObject);
+begin
+   StrTipoCOnta:= 'P'; // Pedido
+   ExecutaForm(TFcad_Pedido, Fcad_Pedido);
+end;
+
+procedure TFPrinc.cxOrcamentoClick(Sender: TObject);
+begin
+   StrTipoCOnta:= 'O'; // Orçamento
+   ExecutaForm(TFcad_Pedido, Fcad_Pedido);
+end;
+
 initialization
-RLConsts.SetVersion(3,70,'B');
+   RLConsts.SetVersion(3,70,'B');
 
 end.

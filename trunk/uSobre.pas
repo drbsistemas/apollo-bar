@@ -18,12 +18,13 @@ uses
 
 type
   TFSobre = class(TForm)
-    cxImage1: TcxImage;
+    pnImg: TcxImage;
     btnFacebook: TcxButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
-    procedure cxImage1Click(Sender: TObject);
+    procedure pnImgClick(Sender: TObject);
     procedure btnFacebookClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +35,8 @@ var
   FSobre: TFSobre;
 
 implementation
+
+uses udmCad, Rotinas;
 
 {$R *.dfm}
 
@@ -52,7 +55,7 @@ begin
    end;
 end;
 
-procedure TFSobre.cxImage1Click(Sender: TObject);
+procedure TFSobre.pnImgClick(Sender: TObject);
 begin
    Close;
 end;
@@ -60,6 +63,15 @@ end;
 procedure TFSobre.btnFacebookClick(Sender: TObject);
 begin
    ShellExecute(Handle, 'open', 'https://www.facebook.com/SistemasDRB', '', '', 1);
+end;
+
+procedure TFSobre.FormCreate(Sender: TObject);
+begin
+   try
+      pnImg.Picture.LoadFromFile(dmCad.cdsConfPASTASERVIDOR.ASString +'\immagini\sobre.png');
+   except
+      Msg('Imagem "Sobre.Png" não encontrada, verifique!','I');
+   end;
 end;
 
 end.

@@ -15,10 +15,11 @@ uses
   dxSkinOffice2010Silver, dxSkinPumpkin, dxSkinSeven, dxSkinSharp,
   dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
   dxSkinsDefaultPainters, dxSkinValentine, dxSkinXmas2008Blue, cxTextEdit,
-  cxLabel, cxButtons;
+  cxLabel, cxButtons, ExtCtrls;
 
 type
   TFormLibera = class(TForm)
+    Panel1: TPanel;
     BitBtn2: TcxButton;
     BitBtn1: TcxButton;
     cxLabel1: TcxLabel;
@@ -39,7 +40,7 @@ var
 
 implementation
 
-uses udmCad, Rotinas, uPrinc, uCon_Captcha;
+uses udmCad, Rotinas, uPrinc, uCon_Captcha, LoginWindow_U;
 
 {$R *.dfm}
 
@@ -86,8 +87,8 @@ end;
 
 procedure TFormLibera.BitBtn2Click(Sender: TObject);
 begin
-   if Fprinc = NIl then
-      Application.Terminate else
+   if (Fprinc = NIl) or (Fprinc.Showing = false) then
+      Application.Terminate else    // Verificar este terminate
       Close;
 end;
 
@@ -108,6 +109,7 @@ end;
 
 procedure TFormLibera.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(FormLibera);
    eSerial.Clear;
    eSerial.SetFocus;
 end;

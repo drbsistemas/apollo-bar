@@ -216,6 +216,7 @@ end;
 
 procedure TFcad_Prod.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcad_Prod);
    if (BUSCACONF('MOSTRACUSTO') = 'NÃO') then
       grConsultaDBTableView1.Columns[7].Visible := false;
    FormAtivo     := Fcad_Prod;

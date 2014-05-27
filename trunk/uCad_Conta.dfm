@@ -1601,7 +1601,11 @@ object Fcad_Conta: TFcad_Conta
       Style.Font.Height = -11
       Style.Font.Name = 'Tahoma'
       Style.Font.Style = [fsBold]
+      Style.LookAndFeel.SkinName = ''
       Style.IsFontAssigned = True
+      StyleDisabled.LookAndFeel.SkinName = ''
+      StyleFocused.LookAndFeel.SkinName = ''
+      StyleHot.LookAndFeel.SkinName = ''
       TabOrder = 0
       Height = 99
       Width = 926

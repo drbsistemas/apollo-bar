@@ -8,346 +8,364 @@
   resources were bound to the produced executable.
 */
 
-#define cxGridPopupMenuConsts_cxSGridAvgMenuItem 64288
-#define cxGridPopupMenuConsts_cxSGridSortByGroupValues 64289
-#define cxGridPopupMenuConsts_cxSGridSortBySummaryCaption 64290
-#define cxGridPopupMenuConsts_cxSGridSortBySummary 64291
-#define cxGridPopupMenuConsts_cxSGridGroupByBox 64304
-#define cxGridPopupMenuConsts_cxSGridAlignmentSubMenu 64305
-#define cxGridPopupMenuConsts_cxSGridAlignLeft 64306
-#define cxGridPopupMenuConsts_cxSGridAlignRight 64307
-#define cxGridPopupMenuConsts_cxSGridAlignCenter 64308
-#define cxGridPopupMenuConsts_cxSGridRemoveColumn 64309
-#define cxGridPopupMenuConsts_cxSGridFieldChooser 64310
-#define cxGridPopupMenuConsts_cxSGridBestFit 64311
-#define cxGridPopupMenuConsts_cxSGridBestFitAllColumns 64312
-#define cxGridPopupMenuConsts_cxSGridShowFooter 64313
-#define cxGridPopupMenuConsts_cxSGridShowGroupFooter 64314
-#define cxGridPopupMenuConsts_cxSGridNoneMenuItem 64315
-#define cxGridPopupMenuConsts_cxSGridSumMenuItem 64316
-#define cxGridPopupMenuConsts_cxSGridMinMenuItem 64317
-#define cxGridPopupMenuConsts_cxSGridMaxMenuItem 64318
-#define cxGridPopupMenuConsts_cxSGridCountMenuItem 64319
-#define ppJvInspector_sppJvInspNoGenReg 64320
-#define ppJvInspector_sppJvInspPaintNotActive 64321
-#define ppJvInspector_sppJvInspPaintOnlyUsedOnce 64322
-#define ppJvInspector_sppJvAssertSetTopIndex 64323
-#define ppJvInspector_sppJvAssertInspectorPainter 64324
-#define ppJvInspector_sppJvAssertDataParent 64325
-#define ppJvInspector_sppJvAssertParent 64326
-#define ppJvInspector_sppJvAssertPropInfo 64327
-#define ppInspector_sJvInspDataNoSelectionController 64328
-#define RxMemDS_SMemNoRecords 64329
-#define cxGridPopupMenuConsts_cxSGridNone 64330
-#define cxGridPopupMenuConsts_cxSGridSortColumnAsc 64331
-#define cxGridPopupMenuConsts_cxSGridSortColumnDesc 64332
-#define cxGridPopupMenuConsts_cxSGridClearSorting 64333
-#define cxGridPopupMenuConsts_cxSGridGroupByThisField 64334
-#define cxGridPopupMenuConsts_cxSGridRemoveThisGroupItem 64335
-#define ppJclResources_ppJclRsRTTIBasedOn 64336
-#define ppJclResources_ppJclRsRTTIFloatType 64337
-#define ppJvInspector_sppJvInspItemHasParent 64338
-#define ppJvInspector_sppJvInspItemValueException 64339
-#define ppJvInspector_sppJvInspItemUnInitialized 64340
-#define ppJvInspector_sppJvInspItemUnassigned 64341
-#define ppJvInspector_sppJvInspItemNoValue 64342
-#define ppJvInspector_sppJvInspItemNotAChild 64343
-#define ppJvInspector_sppJvInspItemColNotFound 64344
-#define ppJvInspector_sppJvInspItemItemIsNotCol 64345
-#define ppJvInspector_sppJvInspItemInvalidPropValue 64346
-#define ppJvInspector_sppJvInspDataNoAccessAs 64347
-#define ppJvInspector_sppJvInspDataNotInit 64348
-#define ppJvInspector_sppJvInspDataNotAssigned 64349
-#define ppJvInspector_sppJvInspDataNoValue 64350
-#define ppJvInspector_sppJvInspDataStrTooLong 64351
-#define ppSt2DBarC_StEInvalidCodeword 64352
-#define ppSt2DBarC_StENeedBarHeight 64353
-#define ppSt2DBarC_StENeedHorz 64354
-#define ppSt2DBarC_StENeedVert 64355
-#define ppJclResources_ppJclRsRTTIValueOutOfRange 64356
-#define ppJclResources_ppJclRsRTTIUnknownIdentifier 64357
-#define ppJclResources_ppJclRsRTTIOrdinal 64358
-#define ppJclResources_ppJclRsRTTITypeError 64359
-#define ppJclResources_ppJclRsRTTITypeInfoAt 64360
-#define ppJclResources_ppJclRsRTTIName 64361
-#define ppJclResources_ppJclRsRTTITypeKind 64362
-#define ppJclResources_ppJclRsRTTIOrdinalType 64363
-#define ppJclResources_ppJclRsRTTIMinValue 64364
-#define ppJclResources_ppJclRsRTTIMaxValue 64365
-#define ppJclResources_ppJclRsRTTINameList 64366
-#define ppJclResources_ppJclRsRTTIUnitName 64367
-#define ppGIFImage_sGIFImageFile 64368
-#define ppGIFImage_sProgressLoading 64369
-#define ppGIFImage_sProgressSaving 64370
-#define ppGIFImage_sProgressConverting 64371
-#define ppGIFImage_sProgressRendering 64372
-#define ppGIFImage_sProgressCopying 64373
-#define ppGIFImage_sProgressOptimizing 64374
-#define ppSt2DBarC_StEBadBarHeight 64375
-#define ppSt2DBarC_StEBadBarHeightToWidth 64376
-#define ppSt2DBarC_StEBadBarWidth 64377
-#define ppSt2DBarC_StEBadNumCols 64378
-#define ppSt2DBarC_StEBadNumRows 64379
-#define ppSt2DBarC_StEBadPostalCode 64380
-#define ppSt2DBarC_StEBadQuietZone 64381
-#define ppSt2DBarC_StECodeTooLarge 64382
-#define ppSt2DBarC_StEGLIOutOfRange 64383
-#define ppGIFImage_sUnsupportedClass 64384
-#define ppGIFImage_sInvalidData 64385
-#define ppGIFImage_sBadHeight 64386
-#define ppGIFImage_sBadWidth 64387
-#define ppGIFImage_sFailedPaste 64388
-#define ppGIFImage_sScreenSizeExceeded 64389
-#define ppGIFImage_sNoColorTable 64390
-#define ppGIFImage_sBadPixelCoordinates 64391
-#define ppGIFImage_sInvalidPixelFormat 64392
-#define ppGIFImage_sBadDimension 64393
-#define ppGIFImage_sNoDIB 64394
-#define ppGIFImage_sInvalidStream 64395
-#define ppGIFImage_sInvalidColor 64396
-#define ppGIFImage_sEmptyColorMap 64397
-#define ppGIFImage_sEmptyImage 64398
-#define ppGIFImage_sInvalidReduction 64399
-#define ppGIFImage_sOutOfData 64400
-#define ppGIFImage_sTooManyColors 64401
-#define ppGIFImage_sBadColorIndex 64402
-#define ppGIFImage_sBadVersion 64403
-#define ppGIFImage_sBadSignature 64404
-#define ppGIFImage_sScreenBadColorSize 64405
-#define ppGIFImage_sImageBadColorSize 64406
-#define ppGIFImage_sUnknownExtension 64407
-#define ppGIFImage_sBadExtensionLabel 64408
-#define ppGIFImage_sOutOfMemDIB 64409
-#define ppGIFImage_sDecodeTooFewBits 64410
-#define ppGIFImage_sDecodeCircular 64411
-#define ppGIFImage_sBadTrailer 64412
-#define ppGIFImage_sBadExtensionInstance 64413
-#define ppGIFImage_sBadBlockSize 64414
-#define ppGIFImage_sBadBlock 64415
-#define cxGridStrs_scxGridChartToolBox 64416
-#define cxGridStrs_scxGridChartDiagramSelector 64417
-#define cxGridStrs_scxGridChartOther 64418
-#define cxGridStrs_scxGridChartValueHints 64419
-#define cxShellCommon_SShellDefaultNameStr 64420
-#define cxShellCommon_SShellDefaultSizeStr 64421
-#define cxShellCommon_SShellDefaultTypeStr 64422
-#define cxShellCommon_SShellDefaultModifiedStr 64423
-#define ppZLib_sInvalidStreamOp 64424
-#define ppTB2Consts_ppSTBToolbarIndexOutOfBounds 64425
-#define ppTB2Consts_ppSTBToolbarItemReinserted 64426
-#define ppTB2Consts_ppSTBViewerNotFound 64427
-#define ppTB2Consts_ppSTBChevronItemMoreButtonsHint 64428
-#define ppTB2Consts_ppSTBMRUListItemDefCaption 64429
-#define ppTB2Consts_ppSTBDockParentNotAllowed 64430
-#define ppTB2Consts_ppSTBDockCannotChangePosition 64431
-#define cxGridStrs_scxGridChartPositionNone 64432
-#define cxGridStrs_scxGridChartPositionLeft 64433
-#define cxGridStrs_scxGridChartPositionTop 64434
-#define cxGridStrs_scxGridChartPositionRight 64435
-#define cxGridStrs_scxGridChartPositionBottom 64436
-#define cxGridStrs_scxGridChartAlignment 64437
-#define cxGridStrs_scxGridChartAlignmentDefault 64438
-#define cxGridStrs_scxGridChartAlignmentStart 64439
-#define cxGridStrs_scxGridChartAlignmentCenter 64440
-#define cxGridStrs_scxGridChartAlignmentEnd 64441
-#define cxGridStrs_scxGridChartOrientation 64442
-#define cxGridStrs_scxGridChartOrientationDefault 64443
-#define cxGridStrs_scxGridChartOrientationHorizontal 64444
-#define cxGridStrs_scxGridChartOrientationVertical 64445
-#define cxGridStrs_scxGridChartBorder 64446
-#define cxGridStrs_scxGridChartTitle 64447
-#define cxGridStrs_scxGridChartToolBoxCustomizeButtonCaption 64448
-#define cxGridStrs_scxGridChartNoneDiagramDisplayText 64449
-#define cxGridStrs_scxGridChartColumnDiagramDisplayText 64450
-#define cxGridStrs_scxGridChartBarDiagramDisplayText 64451
-#define cxGridStrs_scxGridChartLineDiagramDisplayText 64452
-#define cxGridStrs_scxGridChartAreaDiagramDisplayText 64453
-#define cxGridStrs_scxGridChartPieDiagramDisplayText 64454
-#define cxGridStrs_scxGridChartCustomizationFormSeriesPageCaption 64455
-#define cxGridStrs_scxGridChartCustomizationFormSortBySeries 64456
-#define cxGridStrs_scxGridChartCustomizationFormNoSortedSeries 64457
-#define cxGridStrs_scxGridChartCustomizationFormDataGroupsPageCaption 64458
-#define cxGridStrs_scxGridChartCustomizationFormOptionsPageCaption 64459
-#define cxGridStrs_scxGridChartLegend 64460
-#define cxGridStrs_scxGridChartLegendKeyBorder 64461
-#define cxGridStrs_scxGridChartPosition 64462
-#define cxGridStrs_scxGridChartPositionDefault 64463
-#define cxGridStrs_scxGridNextTwoWeeks 64464
-#define cxGridStrs_scxGridLastMonth 64465
-#define cxGridStrs_scxGridThisMonth 64466
-#define cxGridStrs_scxGridNextMonth 64467
-#define cxGridStrs_scxGridLastYear 64468
-#define cxGridStrs_scxGridThisYear 64469
-#define cxGridStrs_scxGridNextYear 64470
-#define cxGridStrs_scxGridPast 64471
-#define cxGridStrs_scxGridFuture 64472
-#define cxGridStrs_scxGridMonthFormat 64473
-#define cxGridStrs_scxGridYearFormat 64474
-#define cxGridStrs_scxGridChartCategoriesDisplayText 64475
-#define cxGridStrs_scxGridChartValueHintFormat 64476
-#define cxGridStrs_scxGridChartPercentValueTickMarkLabelFormat 64477
-#define cxGridStrs_scxGridChartToolBoxDataLevels 64478
-#define cxGridStrs_scxGridChartToolBoxDataLevelSelectValue 64479
-#define cxGridStrs_scxNotExistGridLevel 64480
-#define cxGridStrs_scxCantCreateExportOutputFile 64481
-#define cxGridStrs_cxSEditRepositoryExtLookupComboBoxItem 64482
-#define cxGridStrs_scxGridYesterday 64483
-#define cxGridStrs_scxGridToday 64484
-#define cxGridStrs_scxGridTomorrow 64485
-#define cxGridStrs_scxGridLast30Days 64486
-#define cxGridStrs_scxGridLast14Days 64487
-#define cxGridStrs_scxGridLast7Days 64488
-#define cxGridStrs_scxGridNext7Days 64489
-#define cxGridStrs_scxGridNext14Days 64490
-#define cxGridStrs_scxGridNext30Days 64491
-#define cxGridStrs_scxGridLastTwoWeeks 64492
-#define cxGridStrs_scxGridLastWeek 64493
-#define cxGridStrs_scxGridThisWeek 64494
-#define cxGridStrs_scxGridNextWeek 64495
-#define cxGridStrs_scxGridNewItemRowInfoText 64496
-#define cxGridStrs_scxGridFilterIsEmpty 64497
-#define cxGridStrs_scxGridCustomizationFormCaption 64498
-#define cxGridStrs_scxGridCustomizationFormColumnsPageCaption 64499
-#define cxGridStrs_scxGridGroupByBoxCaption 64500
-#define cxGridStrs_scxGridFilterApplyButtonCaption 64501
-#define cxGridStrs_scxGridFilterCustomizeButtonCaption 64502
-#define cxGridStrs_scxGridColumnsQuickCustomizationHint 64503
-#define cxGridStrs_scxGridCustomizationFormBandsPageCaption 64504
-#define cxGridStrs_scxGridBandsQuickCustomizationHint 64505
-#define cxGridStrs_scxGridCustomizationFormRowsPageCaption 64506
-#define cxGridStrs_scxGridConverterIntermediaryMissing 64507
-#define cxGridStrs_scxGridConverterNotExistGrid 64508
-#define cxGridStrs_scxGridConverterNotExistComponent 64509
-#define cxGridStrs_scxImportErrorCaption 64510
-#define cxGridStrs_scxNotExistGridView 64511
-#define cxPCConsts_scxPCNoRegisteredStyles 64512
-#define cxPCConsts_scxPCPageIndexError 64513
-#define cxPCConsts_scxPCPainterClassError 64514
-#define cxPCConsts_scxPCStandardStyleError 64515
-#define cxPCConsts_scxPCStyleNameError 64516
-#define cxPCConsts_scxPCTabCountEqualsZero 64517
-#define cxPCConsts_scxPCTabIndexError 64518
-#define cxPCConsts_scxPCTabVisibleIndexOutsOfBounds 64519
-#define cxPCConsts_scxPCVisibleTabListEmpty 64520
-#define cxPCConsts_scxPCAllowRotateError 64521
-#define cxGridStrs_scxGridRecursiveLevels 64522
-#define cxGridStrs_scxGridDeletingConfirmationCaption 64523
-#define cxGridStrs_scxGridDeletingFocusedConfirmationText 64524
-#define cxGridStrs_scxGridDeletingSelectedConfirmationText 64525
-#define cxGridStrs_scxGridNoDataInfoText 64526
-#define cxGridStrs_scxGridFilterRowInfoText 64527
-#define cxExtEditConsts_cxSEditRichEditLoadFail 64528
-#define cxExtEditConsts_cxSEditRichEditSaveFail 64529
-#define cxExtEditConsts_cxSEditRichEditSelectionSaveFail 64530
-#define cxExtEditConsts_cxSEditRichEditOleInterfaceFail 64531
-#define cxExtEditConsts_cxSEditRichEditCallBackFail 64532
-#define cxExtEditConsts_cxSEditRichEditLinkFail 64533
-#define cxExtEditConsts_scxSEditRepositoryRichEditItem 64534
-#define cxExtEditConsts_cxSEditRichEditUndoCaption 64535
-#define cxExtEditConsts_cxSEditRichEditRedoCaption 64536
-#define cxExtEditConsts_cxSEditRichEditCutCaption 64537
-#define cxExtEditConsts_cxSEditRichEditCopyCaption 64538
-#define cxExtEditConsts_cxSEditRichEditPasteCaption 64539
-#define cxExtEditConsts_cxSEditRichEditDeleteCaption 64540
-#define cxExtEditConsts_cxSEditRichEditSelectAllCaption 64541
-#define cxPCConsts_scxPCImageListIndexError 64542
-#define cxPCConsts_scxPCNoBaseImages 64543
-#define cxExtEditConsts_scxHotZoneStyleMediaPlayer8 64544
-#define cxExtEditConsts_scxHotZoneStyleXPTaskBar 64545
-#define cxExtEditConsts_scxHotZoneStyleSimple 64546
-#define cxExtEditConsts_scxLoadingFonts 64547
-#define cxExtEditConsts_cxSEditCheckGroupCaptionStateDelimiter 64548
-#define cxExtEditConsts_cxSEditCheckGroupFilterColumnSeparator 64549
-#define cxExtEditConsts_cxSEditCheckGroupChecked 64550
-#define cxExtEditConsts_cxSEditCheckGroupGrayed 64551
-#define cxExtEditConsts_cxSEditCheckGroupUnchecked 64552
-#define cxExtEditConsts_cxSCheckComboBoxStatesItemsPropertyDlgCaption 64553
-#define cxExtEditConsts_cxSCheckGroupStatesItemsPropertyDlgCaption 64554
-#define cxExtEditConsts_cxSCheckComboBoxEmptySelectionText 64555
-#define cxExtEditConsts_cxSCheckControlIncorrectItemCount 64556
-#define cxExtEditConsts_cxSColorComboBoxDefaultDescription 64557
-#define cxExtEditConsts_cxSEditRichEditLibraryError 64558
-#define cxExtEditConsts_cxSEditRichEditLineInsertionError 64559
-#define MidConst_SNoDeletesAllowed 64560
-#define MidConst_SNoInsertsAllowed 64561
-#define MidConst_SCannotChangeCommandText 64562
-#define MidConst_SConnectionMissing 64563
-#define MidConst_SNoCircularConnection 64564
-#define cxExtEditConsts_scxSEditRepositoryColorComboBoxItem 64565
-#define cxExtEditConsts_scxSEditRepositoryFontNameComboBoxItem 64566
-#define cxExtEditConsts_scxSEditRepositoryLabelItem 64567
-#define cxExtEditConsts_scxSEditRepositoryProgressBarItem 64568
-#define cxExtEditConsts_scxSEditRepositoryTrackBarItem 64569
-#define cxExtEditConsts_scxSEditRepositorySpinButtonItem 64570
-#define cxExtEditConsts_scxSEditRepositoryCheckComboBox 64571
-#define cxExtEditConsts_scxSEditRepositoryShellComboBoxItem 64572
-#define cxExtEditConsts_scxSEditRepositoryCheckGroupItem 64573
-#define cxExtEditConsts_scxUDAssociated 64574
-#define cxExtEditConsts_scxHotZoneStyleMediaPlayer9 64575
-#define MidConst_SInvalidResponse 64576
-#define MidConst_STooManyRecordsModified 64577
-#define MidConst_SInvalidOptParamType 64578
-#define MidConst_SMissingDataSet 64579
-#define MidConst_SConstraintFailed 64580
-#define MidConst_SField 64581
-#define MidConst_SReadOnlyProvider 64582
-#define MidConst_SNoKeySpecified 64583
-#define MidConst_SFieldNameTooLong 64584
-#define MidConst_SNoDataSets 64585
-#define MidConst_SRecConstFail 64586
-#define MidConst_SFieldConstFail 64587
-#define MidConst_SDefExprFail 64588
-#define MidConst_SArrayElementError 64589
-#define MidConst_SNoTableName 64590
-#define MidConst_SNoEditsAllowed 64591
-#define SqlConst_SDUPLICATETXNID 64592
-#define SqlConst_SDRIVERRESTRICTED 64593
-#define SqlConst_SLOCALTRANSACTIVE 64594
-#define SqlConst_SMULTIPLETRANSNOTENABLED 64595
-#define SqlConst_SMultiConnNotSupported 64596
-#define SqlConst_SDriverNotInConfigFile 64597
-#define SqlConst_SObjectTypenameRequired 64598
-#define SqlConst_SCannotCreateFile 64599
-#define SqlConst_SCircularProvider 64600
-#define MidConst_SNoDataProvider 64601
-#define MidConst_SInvalidDataPacket 64602
-#define MidConst_SRefreshError 64603
-#define MidConst_SNoCircularReference 64604
-#define MidConst_SErrorLoadingMidas 64605
-#define MidConst_SNoConnectToBroker 64606
-#define MidConst_SNoParentConnection 64607
-#define SqlConst_SDBXUNKNOWNERROR 64608
-#define SqlConst_SNOMEMORY 64609
-#define SqlConst_SINVALIDFLDTYPE 64610
-#define SqlConst_SINVALIDHNDL 64611
-#define SqlConst_SINVALIDTIME 64612
-#define SqlConst_SNOTSUPPORTED 64613
-#define SqlConst_SINVALIDXLATION 64614
-#define SqlConst_SINVALIDPARAM 64615
-#define SqlConst_SOUTOFRANGE 64616
-#define SqlConst_SSQLPARAMNOTSET 64617
-#define SqlConst_SEOF 64618
-#define SqlConst_SINVALIDUSRPASS 64619
-#define SqlConst_SINVALIDPRECISION 64620
-#define SqlConst_SINVALIDLEN 64621
-#define SqlConst_SINVALIDXISOLEVEL 64622
-#define SqlConst_SINVALIDTXNID 64623
-#define SqlConst_SNoSqlStatement 64624
-#define SqlConst_SMissingDataBaseName 64625
-#define SqlConst_SMissingDriverName 64626
-#define SqlConst_SPrepareError 64627
-#define SqlConst_SObjectNameError 64628
-#define SqlConst_SSQLDataSetOpen 64629
-#define SqlConst_SNoActiveTrans 64630
-#define SqlConst_SActiveTrans 64631
-#define SqlConst_SDllLoadError 64632
-#define SqlConst_SDllProcLoadError 64633
-#define SqlConst_SMissingDLLName 64634
-#define SqlConst_SMissingDriverRegFile 64635
-#define SqlConst_SNoCursor 64636
-#define SqlConst_SErrorMappingError 64637
-#define SqlConst_SStoredProcsNotSupported 64638
-#define SqlConst_SPackagesNotSupported 64639
+#define cxGridPopupMenuConsts_cxSGridMaxMenuItem 64272
+#define cxGridPopupMenuConsts_cxSGridCountMenuItem 64273
+#define cxGridPopupMenuConsts_cxSGridAvgMenuItem 64274
+#define cxGridPopupMenuConsts_cxSGridSortByGroupValues 64275
+#define cxGridPopupMenuConsts_cxSGridSortBySummaryCaption 64276
+#define cxGridPopupMenuConsts_cxSGridSortBySummary 64277
+#define cxGridPopupMenuConsts_cxSGridGroupByThisField 64288
+#define cxGridPopupMenuConsts_cxSGridRemoveThisGroupItem 64289
+#define cxGridPopupMenuConsts_cxSGridGroupByBox 64290
+#define cxGridPopupMenuConsts_cxSGridAlignmentSubMenu 64291
+#define cxGridPopupMenuConsts_cxSGridAlignLeft 64292
+#define cxGridPopupMenuConsts_cxSGridAlignRight 64293
+#define cxGridPopupMenuConsts_cxSGridAlignCenter 64294
+#define cxGridPopupMenuConsts_cxSGridRemoveColumn 64295
+#define cxGridPopupMenuConsts_cxSGridFieldChooser 64296
+#define cxGridPopupMenuConsts_cxSGridBestFit 64297
+#define cxGridPopupMenuConsts_cxSGridBestFitAllColumns 64298
+#define cxGridPopupMenuConsts_cxSGridShowFooter 64299
+#define cxGridPopupMenuConsts_cxSGridShowGroupFooter 64300
+#define cxGridPopupMenuConsts_cxSGridNoneMenuItem 64301
+#define cxGridPopupMenuConsts_cxSGridSumMenuItem 64302
+#define cxGridPopupMenuConsts_cxSGridMinMenuItem 64303
+#define ppJvInspector_sppJvInspDataNoValue 64304
+#define ppJvInspector_sppJvInspDataStrTooLong 64305
+#define ppJvInspector_sppJvInspNoGenReg 64306
+#define ppJvInspector_sppJvInspPaintNotActive 64307
+#define ppJvInspector_sppJvInspPaintOnlyUsedOnce 64308
+#define ppJvInspector_sppJvAssertSetTopIndex 64309
+#define ppJvInspector_sppJvAssertInspectorPainter 64310
+#define ppJvInspector_sppJvAssertDataParent 64311
+#define ppJvInspector_sppJvAssertParent 64312
+#define ppJvInspector_sppJvAssertPropInfo 64313
+#define ppInspector_sJvInspDataNoSelectionController 64314
+#define RxMemDS_SMemNoRecords 64315
+#define cxGridPopupMenuConsts_cxSGridNone 64316
+#define cxGridPopupMenuConsts_cxSGridSortColumnAsc 64317
+#define cxGridPopupMenuConsts_cxSGridSortColumnDesc 64318
+#define cxGridPopupMenuConsts_cxSGridClearSorting 64319
+#define ppJclResources_ppJclRsRTTINameList 64320
+#define ppJclResources_ppJclRsRTTIUnitName 64321
+#define ppJclResources_ppJclRsRTTIBasedOn 64322
+#define ppJclResources_ppJclRsRTTIFloatType 64323
+#define ppJvInspector_sppJvInspItemHasParent 64324
+#define ppJvInspector_sppJvInspItemValueException 64325
+#define ppJvInspector_sppJvInspItemUnInitialized 64326
+#define ppJvInspector_sppJvInspItemUnassigned 64327
+#define ppJvInspector_sppJvInspItemNoValue 64328
+#define ppJvInspector_sppJvInspItemNotAChild 64329
+#define ppJvInspector_sppJvInspItemColNotFound 64330
+#define ppJvInspector_sppJvInspItemItemIsNotCol 64331
+#define ppJvInspector_sppJvInspItemInvalidPropValue 64332
+#define ppJvInspector_sppJvInspDataNoAccessAs 64333
+#define ppJvInspector_sppJvInspDataNotInit 64334
+#define ppJvInspector_sppJvInspDataNotAssigned 64335
+#define ppSt2DBarC_StECodeTooLarge 64336
+#define ppSt2DBarC_StEGLIOutOfRange 64337
+#define ppSt2DBarC_StEInvalidCodeword 64338
+#define ppSt2DBarC_StENeedBarHeight 64339
+#define ppSt2DBarC_StENeedHorz 64340
+#define ppSt2DBarC_StENeedVert 64341
+#define ppJclResources_ppJclRsRTTIValueOutOfRange 64342
+#define ppJclResources_ppJclRsRTTIUnknownIdentifier 64343
+#define ppJclResources_ppJclRsRTTIOrdinal 64344
+#define ppJclResources_ppJclRsRTTITypeError 64345
+#define ppJclResources_ppJclRsRTTITypeInfoAt 64346
+#define ppJclResources_ppJclRsRTTIName 64347
+#define ppJclResources_ppJclRsRTTITypeKind 64348
+#define ppJclResources_ppJclRsRTTIOrdinalType 64349
+#define ppJclResources_ppJclRsRTTIMinValue 64350
+#define ppJclResources_ppJclRsRTTIMaxValue 64351
+#define ppGIFImage_sEmptyImage 64352
+#define ppGIFImage_sInvalidReduction 64353
+#define ppGIFImage_sGIFImageFile 64354
+#define ppGIFImage_sProgressLoading 64355
+#define ppGIFImage_sProgressSaving 64356
+#define ppGIFImage_sProgressConverting 64357
+#define ppGIFImage_sProgressRendering 64358
+#define ppGIFImage_sProgressCopying 64359
+#define ppGIFImage_sProgressOptimizing 64360
+#define ppSt2DBarC_StEBadBarHeight 64361
+#define ppSt2DBarC_StEBadBarHeightToWidth 64362
+#define ppSt2DBarC_StEBadBarWidth 64363
+#define ppSt2DBarC_StEBadNumCols 64364
+#define ppSt2DBarC_StEBadNumRows 64365
+#define ppSt2DBarC_StEBadPostalCode 64366
+#define ppSt2DBarC_StEBadQuietZone 64367
+#define ppGIFImage_sBadBlockSize 64368
+#define ppGIFImage_sBadBlock 64369
+#define ppGIFImage_sUnsupportedClass 64370
+#define ppGIFImage_sInvalidData 64371
+#define ppGIFImage_sBadHeight 64372
+#define ppGIFImage_sBadWidth 64373
+#define ppGIFImage_sFailedPaste 64374
+#define ppGIFImage_sScreenSizeExceeded 64375
+#define ppGIFImage_sNoColorTable 64376
+#define ppGIFImage_sBadPixelCoordinates 64377
+#define ppGIFImage_sInvalidPixelFormat 64378
+#define ppGIFImage_sBadDimension 64379
+#define ppGIFImage_sNoDIB 64380
+#define ppGIFImage_sInvalidStream 64381
+#define ppGIFImage_sInvalidColor 64382
+#define ppGIFImage_sEmptyColorMap 64383
+#define ppTB2Consts_ppSTBDockParentNotAllowed 64384
+#define ppTB2Consts_ppSTBDockCannotChangePosition 64385
+#define ppGIFImage_sOutOfData 64386
+#define ppGIFImage_sTooManyColors 64387
+#define ppGIFImage_sBadColorIndex 64388
+#define ppGIFImage_sBadVersion 64389
+#define ppGIFImage_sBadSignature 64390
+#define ppGIFImage_sScreenBadColorSize 64391
+#define ppGIFImage_sImageBadColorSize 64392
+#define ppGIFImage_sUnknownExtension 64393
+#define ppGIFImage_sBadExtensionLabel 64394
+#define ppGIFImage_sOutOfMemDIB 64395
+#define ppGIFImage_sDecodeTooFewBits 64396
+#define ppGIFImage_sDecodeCircular 64397
+#define ppGIFImage_sBadTrailer 64398
+#define ppGIFImage_sBadExtensionInstance 64399
+#define cxGridStrs_scxGridChartBorder 64400
+#define cxGridStrs_scxGridChartTitle 64401
+#define cxGridStrs_scxGridChartToolBox 64402
+#define cxGridStrs_scxGridChartDiagramSelector 64403
+#define cxGridStrs_scxGridChartOther 64404
+#define cxGridStrs_scxGridChartValueHints 64405
+#define cxShellCommon_SShellDefaultNameStr 64406
+#define cxShellCommon_SShellDefaultSizeStr 64407
+#define cxShellCommon_SShellDefaultTypeStr 64408
+#define cxShellCommon_SShellDefaultModifiedStr 64409
+#define ppZLib_sInvalidStreamOp 64410
+#define ppTB2Consts_ppSTBToolbarIndexOutOfBounds 64411
+#define ppTB2Consts_ppSTBToolbarItemReinserted 64412
+#define ppTB2Consts_ppSTBViewerNotFound 64413
+#define ppTB2Consts_ppSTBChevronItemMoreButtonsHint 64414
+#define ppTB2Consts_ppSTBMRUListItemDefCaption 64415
+#define cxGridStrs_scxGridChartPosition 64416
+#define cxGridStrs_scxGridChartPositionDefault 64417
+#define cxGridStrs_scxGridChartPositionNone 64418
+#define cxGridStrs_scxGridChartPositionLeft 64419
+#define cxGridStrs_scxGridChartPositionTop 64420
+#define cxGridStrs_scxGridChartPositionRight 64421
+#define cxGridStrs_scxGridChartPositionBottom 64422
+#define cxGridStrs_scxGridChartAlignment 64423
+#define cxGridStrs_scxGridChartAlignmentDefault 64424
+#define cxGridStrs_scxGridChartAlignmentStart 64425
+#define cxGridStrs_scxGridChartAlignmentCenter 64426
+#define cxGridStrs_scxGridChartAlignmentEnd 64427
+#define cxGridStrs_scxGridChartOrientation 64428
+#define cxGridStrs_scxGridChartOrientationDefault 64429
+#define cxGridStrs_scxGridChartOrientationHorizontal 64430
+#define cxGridStrs_scxGridChartOrientationVertical 64431
+#define cxGridStrs_scxGridChartToolBoxDataLevels 64432
+#define cxGridStrs_scxGridChartToolBoxDataLevelSelectValue 64433
+#define cxGridStrs_scxGridChartToolBoxCustomizeButtonCaption 64434
+#define cxGridStrs_scxGridChartNoneDiagramDisplayText 64435
+#define cxGridStrs_scxGridChartColumnDiagramDisplayText 64436
+#define cxGridStrs_scxGridChartBarDiagramDisplayText 64437
+#define cxGridStrs_scxGridChartLineDiagramDisplayText 64438
+#define cxGridStrs_scxGridChartAreaDiagramDisplayText 64439
+#define cxGridStrs_scxGridChartPieDiagramDisplayText 64440
+#define cxGridStrs_scxGridChartCustomizationFormSeriesPageCaption 64441
+#define cxGridStrs_scxGridChartCustomizationFormSortBySeries 64442
+#define cxGridStrs_scxGridChartCustomizationFormNoSortedSeries 64443
+#define cxGridStrs_scxGridChartCustomizationFormDataGroupsPageCaption 64444
+#define cxGridStrs_scxGridChartCustomizationFormOptionsPageCaption 64445
+#define cxGridStrs_scxGridChartLegend 64446
+#define cxGridStrs_scxGridChartLegendKeyBorder 64447
+#define cxGridStrs_scxGridThisWeek 64448
+#define cxGridStrs_scxGridNextWeek 64449
+#define cxGridStrs_scxGridNextTwoWeeks 64450
+#define cxGridStrs_scxGridLastMonth 64451
+#define cxGridStrs_scxGridThisMonth 64452
+#define cxGridStrs_scxGridNextMonth 64453
+#define cxGridStrs_scxGridLastYear 64454
+#define cxGridStrs_scxGridThisYear 64455
+#define cxGridStrs_scxGridNextYear 64456
+#define cxGridStrs_scxGridPast 64457
+#define cxGridStrs_scxGridFuture 64458
+#define cxGridStrs_scxGridMonthFormat 64459
+#define cxGridStrs_scxGridYearFormat 64460
+#define cxGridStrs_scxGridChartCategoriesDisplayText 64461
+#define cxGridStrs_scxGridChartValueHintFormat 64462
+#define cxGridStrs_scxGridChartPercentValueTickMarkLabelFormat 64463
+#define cxGridStrs_scxImportErrorCaption 64464
+#define cxGridStrs_scxNotExistGridView 64465
+#define cxGridStrs_scxNotExistGridLevel 64466
+#define cxGridStrs_scxCantCreateExportOutputFile 64467
+#define cxGridStrs_cxSEditRepositoryExtLookupComboBoxItem 64468
+#define cxGridStrs_scxGridYesterday 64469
+#define cxGridStrs_scxGridToday 64470
+#define cxGridStrs_scxGridTomorrow 64471
+#define cxGridStrs_scxGridLast30Days 64472
+#define cxGridStrs_scxGridLast14Days 64473
+#define cxGridStrs_scxGridLast7Days 64474
+#define cxGridStrs_scxGridNext7Days 64475
+#define cxGridStrs_scxGridNext14Days 64476
+#define cxGridStrs_scxGridNext30Days 64477
+#define cxGridStrs_scxGridLastTwoWeeks 64478
+#define cxGridStrs_scxGridLastWeek 64479
+#define cxGridStrs_scxGridNoDataInfoText 64480
+#define cxGridStrs_scxGridFilterRowInfoText 64481
+#define cxGridStrs_scxGridNewItemRowInfoText 64482
+#define cxGridStrs_scxGridFilterIsEmpty 64483
+#define cxGridStrs_scxGridCustomizationFormCaption 64484
+#define cxGridStrs_scxGridCustomizationFormColumnsPageCaption 64485
+#define cxGridStrs_scxGridGroupByBoxCaption 64486
+#define cxGridStrs_scxGridFilterApplyButtonCaption 64487
+#define cxGridStrs_scxGridFilterCustomizeButtonCaption 64488
+#define cxGridStrs_scxGridColumnsQuickCustomizationHint 64489
+#define cxGridStrs_scxGridCustomizationFormBandsPageCaption 64490
+#define cxGridStrs_scxGridBandsQuickCustomizationHint 64491
+#define cxGridStrs_scxGridCustomizationFormRowsPageCaption 64492
+#define cxGridStrs_scxGridConverterIntermediaryMissing 64493
+#define cxGridStrs_scxGridConverterNotExistGrid 64494
+#define cxGridStrs_scxGridConverterNotExistComponent 64495
+#define cxPCConsts_scxPCImageListIndexError 64496
+#define cxPCConsts_scxPCNoBaseImages 64497
+#define cxPCConsts_scxPCNoRegisteredStyles 64498
+#define cxPCConsts_scxPCPageIndexError 64499
+#define cxPCConsts_scxPCPainterClassError 64500
+#define cxPCConsts_scxPCStandardStyleError 64501
+#define cxPCConsts_scxPCStyleNameError 64502
+#define cxPCConsts_scxPCTabCountEqualsZero 64503
+#define cxPCConsts_scxPCTabIndexError 64504
+#define cxPCConsts_scxPCTabVisibleIndexOutsOfBounds 64505
+#define cxPCConsts_scxPCVisibleTabListEmpty 64506
+#define cxPCConsts_scxPCAllowRotateError 64507
+#define cxGridStrs_scxGridRecursiveLevels 64508
+#define cxGridStrs_scxGridDeletingConfirmationCaption 64509
+#define cxGridStrs_scxGridDeletingFocusedConfirmationText 64510
+#define cxGridStrs_scxGridDeletingSelectedConfirmationText 64511
+#define cxExtEditConsts_cxSEditRichEditLibraryError 64512
+#define cxExtEditConsts_cxSEditRichEditLineInsertionError 64513
+#define cxExtEditConsts_cxSEditRichEditLoadFail 64514
+#define cxExtEditConsts_cxSEditRichEditSaveFail 64515
+#define cxExtEditConsts_cxSEditRichEditSelectionSaveFail 64516
+#define cxExtEditConsts_cxSEditRichEditOleInterfaceFail 64517
+#define cxExtEditConsts_cxSEditRichEditCallBackFail 64518
+#define cxExtEditConsts_cxSEditRichEditLinkFail 64519
+#define cxExtEditConsts_scxSEditRepositoryRichEditItem 64520
+#define cxExtEditConsts_cxSEditRichEditUndoCaption 64521
+#define cxExtEditConsts_cxSEditRichEditRedoCaption 64522
+#define cxExtEditConsts_cxSEditRichEditCutCaption 64523
+#define cxExtEditConsts_cxSEditRichEditCopyCaption 64524
+#define cxExtEditConsts_cxSEditRichEditPasteCaption 64525
+#define cxExtEditConsts_cxSEditRichEditDeleteCaption 64526
+#define cxExtEditConsts_cxSEditRichEditSelectAllCaption 64527
+#define cxExtEditConsts_scxUDAssociated 64528
+#define cxExtEditConsts_scxHotZoneStyleMediaPlayer9 64529
+#define cxExtEditConsts_scxHotZoneStyleMediaPlayer8 64530
+#define cxExtEditConsts_scxHotZoneStyleXPTaskBar 64531
+#define cxExtEditConsts_scxHotZoneStyleSimple 64532
+#define cxExtEditConsts_scxLoadingFonts 64533
+#define cxExtEditConsts_cxSEditCheckGroupCaptionStateDelimiter 64534
+#define cxExtEditConsts_cxSEditCheckGroupFilterColumnSeparator 64535
+#define cxExtEditConsts_cxSEditCheckGroupChecked 64536
+#define cxExtEditConsts_cxSEditCheckGroupGrayed 64537
+#define cxExtEditConsts_cxSEditCheckGroupUnchecked 64538
+#define cxExtEditConsts_cxSCheckComboBoxStatesItemsPropertyDlgCaption 64539
+#define cxExtEditConsts_cxSCheckGroupStatesItemsPropertyDlgCaption 64540
+#define cxExtEditConsts_cxSCheckComboBoxEmptySelectionText 64541
+#define cxExtEditConsts_cxSCheckControlIncorrectItemCount 64542
+#define cxExtEditConsts_cxSColorComboBoxDefaultDescription 64543
+#define MidConst_SNoTableName 64544
+#define MidConst_SNoEditsAllowed 64545
+#define MidConst_SNoDeletesAllowed 64546
+#define MidConst_SNoInsertsAllowed 64547
+#define MidConst_SCannotChangeCommandText 64548
+#define MidConst_SConnectionMissing 64549
+#define MidConst_SNoCircularConnection 64550
+#define cxExtEditConsts_scxSEditRepositoryColorComboBoxItem 64551
+#define cxExtEditConsts_scxSEditRepositoryFontNameComboBoxItem 64552
+#define cxExtEditConsts_scxSEditRepositoryLabelItem 64553
+#define cxExtEditConsts_scxSEditRepositoryProgressBarItem 64554
+#define cxExtEditConsts_scxSEditRepositoryTrackBarItem 64555
+#define cxExtEditConsts_scxSEditRepositorySpinButtonItem 64556
+#define cxExtEditConsts_scxSEditRepositoryCheckComboBox 64557
+#define cxExtEditConsts_scxSEditRepositoryShellComboBoxItem 64558
+#define cxExtEditConsts_scxSEditRepositoryCheckGroupItem 64559
+#define MidConst_SNoConnectToBroker 64560
+#define MidConst_SNoParentConnection 64561
+#define MidConst_SInvalidResponse 64562
+#define MidConst_STooManyRecordsModified 64563
+#define MidConst_SInvalidOptParamType 64564
+#define MidConst_SMissingDataSet 64565
+#define MidConst_SConstraintFailed 64566
+#define MidConst_SField 64567
+#define MidConst_SReadOnlyProvider 64568
+#define MidConst_SNoKeySpecified 64569
+#define MidConst_SFieldNameTooLong 64570
+#define MidConst_SNoDataSets 64571
+#define MidConst_SRecConstFail 64572
+#define MidConst_SFieldConstFail 64573
+#define MidConst_SDefExprFail 64574
+#define MidConst_SArrayElementError 64575
+#define SqlConst_SINVALIDXISOLEVEL 64576
+#define SqlConst_SINVALIDTXNID 64577
+#define SqlConst_SDUPLICATETXNID 64578
+#define SqlConst_SDRIVERRESTRICTED 64579
+#define SqlConst_SLOCALTRANSACTIVE 64580
+#define SqlConst_SMULTIPLETRANSNOTENABLED 64581
+#define SqlConst_SMultiConnNotSupported 64582
+#define SqlConst_SDriverNotInConfigFile 64583
+#define SqlConst_SObjectTypenameRequired 64584
+#define SqlConst_SCannotCreateFile 64585
+#define SqlConst_SCircularProvider 64586
+#define MidConst_SNoDataProvider 64587
+#define MidConst_SInvalidDataPacket 64588
+#define MidConst_SRefreshError 64589
+#define MidConst_SNoCircularReference 64590
+#define MidConst_SErrorLoadingMidas 64591
+#define SqlConst_SStoredProcsNotSupported 64592
+#define SqlConst_SPackagesNotSupported 64593
+#define SqlConst_SDBXUNKNOWNERROR 64594
+#define SqlConst_SNOMEMORY 64595
+#define SqlConst_SINVALIDFLDTYPE 64596
+#define SqlConst_SINVALIDHNDL 64597
+#define SqlConst_SINVALIDTIME 64598
+#define SqlConst_SNOTSUPPORTED 64599
+#define SqlConst_SINVALIDXLATION 64600
+#define SqlConst_SINVALIDPARAM 64601
+#define SqlConst_SOUTOFRANGE 64602
+#define SqlConst_SSQLPARAMNOTSET 64603
+#define SqlConst_SEOF 64604
+#define SqlConst_SINVALIDUSRPASS 64605
+#define SqlConst_SINVALIDPRECISION 64606
+#define SqlConst_SINVALIDLEN 64607
+#define SqlConst_SEmptySQLStatement 64608
+#define SqlConst_SNoParameterValue 64609
+#define SqlConst_SNoSqlStatement 64610
+#define SqlConst_SMissingDataBaseName 64611
+#define SqlConst_SMissingDriverName 64612
+#define SqlConst_SPrepareError 64613
+#define SqlConst_SObjectNameError 64614
+#define SqlConst_SSQLDataSetOpen 64615
+#define SqlConst_SNoActiveTrans 64616
+#define SqlConst_SActiveTrans 64617
+#define SqlConst_SDllLoadError 64618
+#define SqlConst_SDllProcLoadError 64619
+#define SqlConst_SMissingDLLName 64620
+#define SqlConst_SMissingDriverRegFile 64621
+#define SqlConst_SNoCursor 64622
+#define SqlConst_SErrorMappingError 64623
+#define pnglang_EPNGUnknownPalEntryText 64624
+#define pnglang_EPNGUnknownCriticalChunkText 64625
+#define pnglang_EPNGUnknownCompressionText 64626
+#define pnglang_EPNGUnknownInterlaceText 64627
+#define pnglang_EPNGCannotAssignChunkText 64628
+#define pnglang_EPNGUnexpectedEndText 64629
+#define pnglang_EPNGNoImageDataText 64630
+#define pnglang_EPNGOutMemoryText 64631
+#define pnglang_EPNGHeaderNotPresentText 64632
+#define pnglang_EInvalidNewSize 64633
+#define SqlConst_SLoginError 64634
+#define SqlConst_SMonitorActive 64635
+#define SqlConst_SDatabaseOpen 64636
+#define SqlConst_SDatabaseClosed 64637
+#define SqlConst_SMissingSQLConnection 64638
+#define SqlConst_SConnectionNameMissing 64639
 #define VDBConsts_SCancelEdit 64640
 #define VDBConsts_SRefreshRecord 64641
 #define VDBConsts_SDeleteRecordQuestion 64642
@@ -356,14 +374,14 @@
 #define VDBConsts_SPropDefByLookup 64645
 #define VDBConsts_STooManyColumns 64646
 #define VDBConsts_SRemoteLogin 64647
-#define SqlConst_SLoginError 64648
-#define SqlConst_SMonitorActive 64649
-#define SqlConst_SDatabaseOpen 64650
-#define SqlConst_SDatabaseClosed 64651
-#define SqlConst_SMissingSQLConnection 64652
-#define SqlConst_SConnectionNameMissing 64653
-#define SqlConst_SEmptySQLStatement 64654
-#define SqlConst_SNoParameterValue 64655
+#define pnglang_EPngInvalidCRCText 64648
+#define pnglang_EPNGInvalidIHDRText 64649
+#define pnglang_EPNGMissingMultipleIDATText 64650
+#define pnglang_EPNGZLIBErrorText 64651
+#define pnglang_EPNGInvalidPaletteText 64652
+#define pnglang_EPNGInvalidFileHeaderText 64653
+#define pnglang_EPNGIHDRNotFirstText 64654
+#define pnglang_EPNGSizeExceedsText 64655
 #define cxFilterControlStrs_cxSFilterControlDialogActionApplyCaption 64656
 #define cxFilterControlStrs_cxSFilterControlDialogActionOkCaption 64657
 #define cxFilterControlStrs_cxSFilterControlDialogActionCancelCaption 64658
@@ -1246,10 +1264,14 @@
 #define SysConst_SAccessDenied 65535
 STRINGTABLE
 BEGIN
+	cxGridPopupMenuConsts_cxSGridMaxMenuItem,	"Max"
+	cxGridPopupMenuConsts_cxSGridCountMenuItem,	"Count"
 	cxGridPopupMenuConsts_cxSGridAvgMenuItem,	"Average"
 	cxGridPopupMenuConsts_cxSGridSortByGroupValues,	"Sort by Group Value"
 	cxGridPopupMenuConsts_cxSGridSortBySummaryCaption,	"Sort by Group Summary:"
 	cxGridPopupMenuConsts_cxSGridSortBySummary,	"%s for %s"
+	cxGridPopupMenuConsts_cxSGridGroupByThisField,	"Group By This Field"
+	cxGridPopupMenuConsts_cxSGridRemoveThisGroupItem,	"Remove from grouping"
 	cxGridPopupMenuConsts_cxSGridGroupByBox,	"Group By Box"
 	cxGridPopupMenuConsts_cxSGridAlignmentSubMenu,	"Alignment"
 	cxGridPopupMenuConsts_cxSGridAlignLeft,	"Align Left"
@@ -1264,8 +1286,8 @@ BEGIN
 	cxGridPopupMenuConsts_cxSGridNoneMenuItem,	"None"
 	cxGridPopupMenuConsts_cxSGridSumMenuItem,	"Sum"
 	cxGridPopupMenuConsts_cxSGridMinMenuItem,	"Min"
-	cxGridPopupMenuConsts_cxSGridMaxMenuItem,	"Max"
-	cxGridPopupMenuConsts_cxSGridCountMenuItem,	"Count"
+	ppJvInspector_sppJvInspDataNoValue,	"Data has no value."
+	ppJvInspector_sppJvInspDataStrTooLong,	"String too long."
 	ppJvInspector_sppJvInspNoGenReg,	"Unable to create generic item registration list."
 	ppJvInspector_sppJvInspPaintNotActive,	"Painter is not the active painter of the specified inspector."
 	ppJvInspector_sppJvInspPaintOnlyUsedOnce,	"Inspector painter can only be linked to one inspector."
@@ -1280,8 +1302,8 @@ BEGIN
 	cxGridPopupMenuConsts_cxSGridSortColumnAsc,	"Sort Ascending"
 	cxGridPopupMenuConsts_cxSGridSortColumnDesc,	"Sort Descending"
 	cxGridPopupMenuConsts_cxSGridClearSorting,	"Clear Sorting"
-	cxGridPopupMenuConsts_cxSGridGroupByThisField,	"Group By This Field"
-	cxGridPopupMenuConsts_cxSGridRemoveThisGroupItem,	"Remove from grouping"
+	ppJclResources_ppJclRsRTTINameList,	"Names: "
+	ppJclResources_ppJclRsRTTIUnitName,	"Unit name: "
 	ppJclResources_ppJclRsRTTIBasedOn,	"Based on: "
 	ppJclResources_ppJclRsRTTIFloatType,	"Float type: "
 	ppJvInspector_sppJvInspItemHasParent,	"Item already assigned to another parent."
@@ -1296,8 +1318,8 @@ BEGIN
 	ppJvInspector_sppJvInspDataNoAccessAs,	"Data cannot be accessed as %s."
 	ppJvInspector_sppJvInspDataNotInit,	"Data not initialized."
 	ppJvInspector_sppJvInspDataNotAssigned,	"Data not assigned."
-	ppJvInspector_sppJvInspDataNoValue,	"Data has no value."
-	ppJvInspector_sppJvInspDataStrTooLong,	"String too long."
+	ppSt2DBarC_StECodeTooLarge,	"Code too large for barcode"
+	ppSt2DBarC_StEGLIOutOfRange,	"GLI value out of range"
 	ppSt2DBarC_StEInvalidCodeword,	"Invalid Codeword"
 	ppSt2DBarC_StENeedBarHeight,	"Either BarHeight or BarHeightToWidth is required"
 	ppSt2DBarC_StENeedHorz,	"Horizontal size needs to be specified"
@@ -1312,8 +1334,8 @@ BEGIN
 	ppJclResources_ppJclRsRTTIOrdinalType,	"Ordinal type: "
 	ppJclResources_ppJclRsRTTIMinValue,	"Min value: "
 	ppJclResources_ppJclRsRTTIMaxValue,	"Max value: "
-	ppJclResources_ppJclRsRTTINameList,	"Names: "
-	ppJclResources_ppJclRsRTTIUnitName,	"Unit name: "
+	ppGIFImage_sEmptyImage,	"Image is empty"
+	ppGIFImage_sInvalidReduction,	"Invalid reduction method"
 	ppGIFImage_sGIFImageFile,	"GIF Image"
 	ppGIFImage_sProgressLoading,	"Loading..."
 	ppGIFImage_sProgressSaving,	"Saving..."
@@ -1328,8 +1350,8 @@ BEGIN
 	ppSt2DBarC_StEBadNumRows,	"Invalid number of rows"
 	ppSt2DBarC_StEBadPostalCode,	"Invalid Postal Code"
 	ppSt2DBarC_StEBadQuietZone,	"Invalid Quiet Zone"
-	ppSt2DBarC_StECodeTooLarge,	"Code too large for barcode"
-	ppSt2DBarC_StEGLIOutOfRange,	"GLI value out of range"
+	ppGIFImage_sBadBlockSize,	"Unsupported Application Extension block size"
+	ppGIFImage_sBadBlock,	"Unknown GIF block type"
 	ppGIFImage_sUnsupportedClass,	"Object type not supported for operation"
 	ppGIFImage_sInvalidData,	"Invalid GIF data"
 	ppGIFImage_sBadHeight,	"Image height too small for contained frames"
@@ -1344,8 +1366,8 @@ BEGIN
 	ppGIFImage_sInvalidStream,	"Invalid stream operation"
 	ppGIFImage_sInvalidColor,	"Color not in color table"
 	ppGIFImage_sEmptyColorMap,	"Color table is empty"
-	ppGIFImage_sEmptyImage,	"Image is empty"
-	ppGIFImage_sInvalidReduction,	"Invalid reduction method"
+	ppTB2Consts_ppSTBDockParentNotAllowed,	"A TTBDock control cannot be placed inside a tool window or another TTBDock"
+	ppTB2Consts_ppSTBDockCannotChangePosition,	"Cannot change Position of a TTBDock if it already contains controls"
 	ppGIFImage_sOutOfData,	"Premature end of data"
 	ppGIFImage_sTooManyColors,	"Color table overflow"
 	ppGIFImage_sBadColorIndex,	"Invalid color index"
@@ -1360,8 +1382,8 @@ BEGIN
 	ppGIFImage_sDecodeCircular,	"Circular decoder table entry"
 	ppGIFImage_sBadTrailer,	"Invalid Image trailer"
 	ppGIFImage_sBadExtensionInstance,	"Internal error: Extension Instance does not match Extension Label"
-	ppGIFImage_sBadBlockSize,	"Unsupported Application Extension block size"
-	ppGIFImage_sBadBlock,	"Unknown GIF block type"
+	cxGridStrs_scxGridChartBorder,	"Border"
+	cxGridStrs_scxGridChartTitle,	"Title"
 	cxGridStrs_scxGridChartToolBox,	"ToolBox"
 	cxGridStrs_scxGridChartDiagramSelector,	"Diagram Selector"
 	cxGridStrs_scxGridChartOther,	"Other"
@@ -1376,8 +1398,8 @@ BEGIN
 	ppTB2Consts_ppSTBViewerNotFound,	"An item viewer associated the specified item could not be found"
 	ppTB2Consts_ppSTBChevronItemMoreButtonsHint,	"More Buttons|"
 	ppTB2Consts_ppSTBMRUListItemDefCaption,	"(MRU List)"
-	ppTB2Consts_ppSTBDockParentNotAllowed,	"A TTBDock control cannot be placed inside a tool window or another TTBDock"
-	ppTB2Consts_ppSTBDockCannotChangePosition,	"Cannot change Position of a TTBDock if it already contains controls"
+	cxGridStrs_scxGridChartPosition,	"Position"
+	cxGridStrs_scxGridChartPositionDefault,	"Default"
 	cxGridStrs_scxGridChartPositionNone,	"None"
 	cxGridStrs_scxGridChartPositionLeft,	"Left"
 	cxGridStrs_scxGridChartPositionTop,	"Top"
@@ -1392,8 +1414,8 @@ BEGIN
 	cxGridStrs_scxGridChartOrientationDefault,	"Default"
 	cxGridStrs_scxGridChartOrientationHorizontal,	"Horizontal"
 	cxGridStrs_scxGridChartOrientationVertical,	"Vertical"
-	cxGridStrs_scxGridChartBorder,	"Border"
-	cxGridStrs_scxGridChartTitle,	"Title"
+	cxGridStrs_scxGridChartToolBoxDataLevels,	"Data Levels:"
+	cxGridStrs_scxGridChartToolBoxDataLevelSelectValue,	"select value"
 	cxGridStrs_scxGridChartToolBoxCustomizeButtonCaption,	"Customize Chart"
 	cxGridStrs_scxGridChartNoneDiagramDisplayText,	"No diagram"
 	cxGridStrs_scxGridChartColumnDiagramDisplayText,	"Column diagram"
@@ -1408,8 +1430,8 @@ BEGIN
 	cxGridStrs_scxGridChartCustomizationFormOptionsPageCaption,	"Options"
 	cxGridStrs_scxGridChartLegend,	"Legend"
 	cxGridStrs_scxGridChartLegendKeyBorder,	"Key Border"
-	cxGridStrs_scxGridChartPosition,	"Position"
-	cxGridStrs_scxGridChartPositionDefault,	"Default"
+	cxGridStrs_scxGridThisWeek,	"This week"
+	cxGridStrs_scxGridNextWeek,	"Next week"
 	cxGridStrs_scxGridNextTwoWeeks,	"Next two weeks"
 	cxGridStrs_scxGridLastMonth,	"Last month"
 	cxGridStrs_scxGridThisMonth,	"This month"
@@ -1424,8 +1446,8 @@ BEGIN
 	cxGridStrs_scxGridChartCategoriesDisplayText,	"Data"
 	cxGridStrs_scxGridChartValueHintFormat,	"%s for %s is %s"
 	cxGridStrs_scxGridChartPercentValueTickMarkLabelFormat,	"0%"
-	cxGridStrs_scxGridChartToolBoxDataLevels,	"Data Levels:"
-	cxGridStrs_scxGridChartToolBoxDataLevelSelectValue,	"select value"
+	cxGridStrs_scxImportErrorCaption,	"Import error"
+	cxGridStrs_scxNotExistGridView,	"Grid view does not exist"
 	cxGridStrs_scxNotExistGridLevel,	"Active grid level does not exist"
 	cxGridStrs_scxCantCreateExportOutputFile,	"Can't create the export output file"
 	cxGridStrs_cxSEditRepositoryExtLookupComboBoxItem,	"ExtLookupComboBox|Represents an ultra-advanced lookup using the QuantumGrid as its drop down control"
@@ -1440,8 +1462,8 @@ BEGIN
 	cxGridStrs_scxGridNext30Days,	"Next 30 days"
 	cxGridStrs_scxGridLastTwoWeeks,	"Last two weeks"
 	cxGridStrs_scxGridLastWeek,	"Last week"
-	cxGridStrs_scxGridThisWeek,	"This week"
-	cxGridStrs_scxGridNextWeek,	"Next week"
+	cxGridStrs_scxGridNoDataInfoText,	"<No data to display>"
+	cxGridStrs_scxGridFilterRowInfoText,	"Click here to define a filter"
 	cxGridStrs_scxGridNewItemRowInfoText,	"Click here to add a new row"
 	cxGridStrs_scxGridFilterIsEmpty,	"<Filter is Empty>"
 	cxGridStrs_scxGridCustomizationFormCaption,	"Customization"
@@ -1456,8 +1478,8 @@ BEGIN
 	cxGridStrs_scxGridConverterIntermediaryMissing,	"Missing an intermediary component!\r\nPlease add a %s component to the form."
 	cxGridStrs_scxGridConverterNotExistGrid,	"cxGrid does not exist"
 	cxGridStrs_scxGridConverterNotExistComponent,	"Component does not exist"
-	cxGridStrs_scxImportErrorCaption,	"Import error"
-	cxGridStrs_scxNotExistGridView,	"Grid view does not exist"
+	cxPCConsts_scxPCImageListIndexError,	"Index (%d) must be between 0 and %d"
+	cxPCConsts_scxPCNoBaseImages,	"BaseImages is not assigned"
 	cxPCConsts_scxPCNoRegisteredStyles,	"There are no styles registered"
 	cxPCConsts_scxPCPageIndexError,	"%d is an invalid PageIndex value.  PageIndex must be between 0 and %d"
 	cxPCConsts_scxPCPainterClassError,	"PCPainterClass is nil"
@@ -1472,8 +1494,8 @@ BEGIN
 	cxGridStrs_scxGridDeletingConfirmationCaption,	"Confirm"
 	cxGridStrs_scxGridDeletingFocusedConfirmationText,	"Delete record?"
 	cxGridStrs_scxGridDeletingSelectedConfirmationText,	"Delete all selected records?"
-	cxGridStrs_scxGridNoDataInfoText,	"<No data to display>"
-	cxGridStrs_scxGridFilterRowInfoText,	"Click here to define a filter"
+	cxExtEditConsts_cxSEditRichEditLibraryError,	"Cannot load a RichEdit library"
+	cxExtEditConsts_cxSEditRichEditLineInsertionError,	"RichEdit line insertion error"
 	cxExtEditConsts_cxSEditRichEditLoadFail,	"Failed to Load Stream"
 	cxExtEditConsts_cxSEditRichEditSaveFail,	"Failed to Save Stream"
 	cxExtEditConsts_cxSEditRichEditSelectionSaveFail,	"Failed to selection Save Stream"
@@ -1488,8 +1510,8 @@ BEGIN
 	cxExtEditConsts_cxSEditRichEditPasteCaption,	"&Paste"
 	cxExtEditConsts_cxSEditRichEditDeleteCaption,	"&Delete"
 	cxExtEditConsts_cxSEditRichEditSelectAllCaption,	"Select &All"
-	cxPCConsts_scxPCImageListIndexError,	"Index (%d) must be between 0 and %d"
-	cxPCConsts_scxPCNoBaseImages,	"BaseImages is not assigned"
+	cxExtEditConsts_scxUDAssociated,	" is already associated with "
+	cxExtEditConsts_scxHotZoneStyleMediaPlayer9,	"MediaPlayer9"
 	cxExtEditConsts_scxHotZoneStyleMediaPlayer8,	"MediaPlayer8"
 	cxExtEditConsts_scxHotZoneStyleXPTaskBar,	"XPTaskBar"
 	cxExtEditConsts_scxHotZoneStyleSimple,	"Simple"
@@ -1504,8 +1526,8 @@ BEGIN
 	cxExtEditConsts_cxSCheckComboBoxEmptySelectionText,	"None selected"
 	cxExtEditConsts_cxSCheckControlIncorrectItemCount,	"The number of items cannot be greater than 64, if the EditValueFormat is cvfInteger"
 	cxExtEditConsts_cxSColorComboBoxDefaultDescription,	"Color not selected"
-	cxExtEditConsts_cxSEditRichEditLibraryError,	"Cannot load a RichEdit library"
-	cxExtEditConsts_cxSEditRichEditLineInsertionError,	"RichEdit line insertion error"
+	MidConst_SNoTableName,	"Unable to resolve records.  Table name not found."
+	MidConst_SNoEditsAllowed,	"Modifications are not allowed"
 	MidConst_SNoDeletesAllowed,	"Deletes are not allowed"
 	MidConst_SNoInsertsAllowed,	"Inserts are not allowed"
 	MidConst_SCannotChangeCommandText,	"CommandText changes are not allowed"
@@ -1520,8 +1542,8 @@ BEGIN
 	cxExtEditConsts_scxSEditRepositoryCheckComboBox,	"CheckComboBox|Represents a CheckComboBox"
 	cxExtEditConsts_scxSEditRepositoryShellComboBoxItem,	"ShellComboBox|Represents a combo box with a dropdown shell tree view"
 	cxExtEditConsts_scxSEditRepositoryCheckGroupItem,	"CheckGroup|Represents a group of check boxes"
-	cxExtEditConsts_scxUDAssociated,	" is already associated with "
-	cxExtEditConsts_scxHotZoneStyleMediaPlayer9,	"MediaPlayer9"
+	MidConst_SNoConnectToBroker,	"Connection not allowed to TConnectionBroker"
+	MidConst_SNoParentConnection,	"ParentConnection is not assigned"
 	MidConst_SInvalidResponse,	"Invalid response"
 	MidConst_STooManyRecordsModified,	"Update affected more than 1 record."
 	MidConst_SInvalidOptParamType,	"Value cannot be stored in an optional parameter"
@@ -1536,8 +1558,8 @@ BEGIN
 	MidConst_SFieldConstFail,	"Preparation of field constraint failed with error \"%s\""
 	MidConst_SDefExprFail,	"Preparation of default expression failed with error \"%s\""
 	MidConst_SArrayElementError,	"Array elements of type %s are not supported"
-	MidConst_SNoTableName,	"Unable to resolve records.  Table name not found."
-	MidConst_SNoEditsAllowed,	"Modifications are not allowed"
+	SqlConst_SINVALIDXISOLEVEL,	"dbExpress Error: Invalid Transaction Isolation Level"
+	SqlConst_SINVALIDTXNID,	"dbExpress Error: Invalid Transaction ID"
 	SqlConst_SDUPLICATETXNID,	"dbExpress Error: Duplicate Transaction ID"
 	SqlConst_SDRIVERRESTRICTED,	"dbExpress Error: Application is not licensed to use this feature"
 	SqlConst_SLOCALTRANSACTIVE,	"dbExpress Error: Local Transaction already active"
@@ -1552,8 +1574,8 @@ BEGIN
 	MidConst_SRefreshError,	"Must apply updates before refreshing data"
 	MidConst_SNoCircularReference,	"Circular provider references not allowed"
 	MidConst_SErrorLoadingMidas,	"Error loading MIDAS.DLL"
-	MidConst_SNoConnectToBroker,	"Connection not allowed to TConnectionBroker"
-	MidConst_SNoParentConnection,	"ParentConnection is not assigned"
+	SqlConst_SStoredProcsNotSupported,	"Stored Procedures not supported by '%s' Server"
+	SqlConst_SPackagesNotSupported,	"Packages are not supported by '%s' Server"
 	SqlConst_SDBXUNKNOWNERROR,	"DBX Error: No Mapping for Error Code Found"
 	SqlConst_SNOMEMORY,	"dbExpress Error: Insufficient Memory for Operation"
 	SqlConst_SINVALIDFLDTYPE,	"dbExpress Error: Invalid Field Type"
@@ -1568,8 +1590,8 @@ BEGIN
 	SqlConst_SINVALIDUSRPASS,	"dbExpress Error: Invalid Username/Password"
 	SqlConst_SINVALIDPRECISION,	"dbExpress Error: Invalid Precision"
 	SqlConst_SINVALIDLEN,	"dbExpress Error: Invalid Length"
-	SqlConst_SINVALIDXISOLEVEL,	"dbExpress Error: Invalid Transaction Isolation Level"
-	SqlConst_SINVALIDTXNID,	"dbExpress Error: Invalid Transaction ID"
+	SqlConst_SEmptySQLStatement,	"No SQL statement available"
+	SqlConst_SNoParameterValue,	"No value for parameter '%s'"
 	SqlConst_SNoSqlStatement,	"Missing query, table name or procedure name"
 	SqlConst_SMissingDataBaseName,	"Missing Database property"
 	SqlConst_SMissingDriverName,	"Missing DriverName property"
@@ -1584,8 +1606,22 @@ BEGIN
 	SqlConst_SMissingDriverRegFile,	"Driver/Connection Registry File '%s' not found"
 	SqlConst_SNoCursor,	"Cursor not returned from Query"
 	SqlConst_SErrorMappingError,	"SQL Error: Error mapping failed"
-	SqlConst_SStoredProcsNotSupported,	"Stored Procedures not supported by '%s' Server"
-	SqlConst_SPackagesNotSupported,	"Packages are not supported by '%s' Server"
+	pnglang_EPNGUnknownPalEntryText,	"There is no such palette entry."
+	pnglang_EPNGUnknownCriticalChunkText,	"This \"Portable Network Graphics\" image contains an unknown critical part which could not be decoded."
+	pnglang_EPNGUnknownCompressionText,	"This \"Portable Network Graphics\" image is encoded with an unknown compression scheme which could not be decoded."
+	pnglang_EPNGUnknownInterlaceText,	"This \"Portable Network Graphics\" image uses an unknown interlace scheme which could not be decoded."
+	pnglang_EPNGCannotAssignChunkText,	"The chunks must be compatible to be assigned."
+	pnglang_EPNGUnexpectedEndText,	"This \"Portable Network Graphics\" image is invalid because the decoder found an unexpected end of the file."
+	pnglang_EPNGNoImageDataText,	"This \"Portable Network Graphics\" image contains no data."
+	pnglang_EPNGOutMemoryText,	"Some operation could not be performed because the system is out of resources. Close some windows and try again."
+	pnglang_EPNGHeaderNotPresentText,	"This operation is not valid because the current image contains no valid header."
+	pnglang_EInvalidNewSize,	"The new size provided for image resizing is invalid."
+	SqlConst_SLoginError,	"Cannot connect to database '%s'"
+	SqlConst_SMonitorActive,	"Cannot change connection on Active Monitor"
+	SqlConst_SDatabaseOpen,	"Cannot perform this operation on an open connection"
+	SqlConst_SDatabaseClosed,	"Cannot perform this operation on a closed connection"
+	SqlConst_SMissingSQLConnection,	"SQLConnection property required for this operation"
+	SqlConst_SConnectionNameMissing,	"Connection name missing"
 	VDBConsts_SCancelEdit,	"Cancel edit"
 	VDBConsts_SRefreshRecord,	"Refresh data"
 	VDBConsts_SDeleteRecordQuestion,	"Delete record?"
@@ -1594,14 +1630,14 @@ BEGIN
 	VDBConsts_SPropDefByLookup,	"Property already defined by lookup field"
 	VDBConsts_STooManyColumns,	"Grid requested to display more than 256 columns"
 	VDBConsts_SRemoteLogin,	"Remote Login"
-	SqlConst_SLoginError,	"Cannot connect to database '%s'"
-	SqlConst_SMonitorActive,	"Cannot change connection on Active Monitor"
-	SqlConst_SDatabaseOpen,	"Cannot perform this operation on an open connection"
-	SqlConst_SDatabaseClosed,	"Cannot perform this operation on a closed connection"
-	SqlConst_SMissingSQLConnection,	"SQLConnection property required for this operation"
-	SqlConst_SConnectionNameMissing,	"Connection name missing"
-	SqlConst_SEmptySQLStatement,	"No SQL statement available"
-	SqlConst_SNoParameterValue,	"No value for parameter '%s'"
+	pnglang_EPngInvalidCRCText,	"This \"Portable Network Graphics\" image is not valid because it contains invalid pieces of data (crc error)"
+	pnglang_EPNGInvalidIHDRText,	"The \"Portable Network Graphics\" image could not be loaded because one of its main piece of data (ihdr) might be corrupted"
+	pnglang_EPNGMissingMultipleIDATText,	"This \"Portable Network Graphics\" image is invalid because it has missing image parts."
+	pnglang_EPNGZLIBErrorText,	"Could not decompress the image because it contains invalid compressed data.\r\n Description: "
+	pnglang_EPNGInvalidPaletteText,	"The \"Portable Network Graphics\" image contains an invalid palette."
+	pnglang_EPNGInvalidFileHeaderText,	"The file being readed is not a valid \"Portable Network Graphics\" image because it contains an invalid header. This file may be corruped, try obtaining it again."
+	pnglang_EPNGIHDRNotFirstText,	"This \"Portable Network Graphics\" image is not supported or it might be invalid.\r\n(IHDR chunk is not the first)"
+	pnglang_EPNGSizeExceedsText,	"This \"Portable Network Graphics\" image is not supported because either it's width or height exceeds the maximum size, which is 65535 pixels length."
 	cxFilterControlStrs_cxSFilterControlDialogActionApplyCaption,	"&Apply"
 	cxFilterControlStrs_cxSFilterControlDialogActionOkCaption,	"OK"
 	cxFilterControlStrs_cxSFilterControlDialogActionCancelCaption,	"Cancel"

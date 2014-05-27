@@ -135,6 +135,7 @@ end;
 
 procedure TFcad_Empresa.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcad_Empresa);
    Consulta;
    FormAtivo := Fcad_Empresa;
 end;

@@ -356,6 +356,7 @@ type
     cdsCOnfSENHAEMAIL: TStringField;
     cdsCOnfPORTAEMAIL: TIntegerField;
     cdsCOnfSSLEMAIL: TIntegerField;
+    SQLMonitor1: TSQLMonitor;
     ///// Privado
     procedure ConectaBanco;
     /////
@@ -497,6 +498,7 @@ begin
       on EDatabaseError do
       begin
          MessageDlg('Erro ao conectar o Banco de dados', mtError, [mbOK], 0);
+         Application.terminate;
       end;
    end;
 end;

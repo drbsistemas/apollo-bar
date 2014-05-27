@@ -126,6 +126,7 @@ end;
 
 procedure TFcon_Cidade.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(FCon_cidade);
    try
       pnImg.Picture.LoadFromFile(dmCad.cdsConfPASTASERVIDOR.ASString +'immagini\cons.png');
    except

@@ -160,6 +160,7 @@ end;
 
 procedure TFcad_Balanco.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcad_Balanco);
    MudaPainel(0); // Consulta
    cbOrdem.ItemIndex := 2; // Produto
    cbOrdemPropertiesChange(self);

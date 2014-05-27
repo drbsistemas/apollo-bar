@@ -361,6 +361,7 @@ end;
 
 procedure TFcad_Caixa.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(FCad_Caixa);
    FormAtivo     := Fcad_Caixa;
    MudaPainel(0); // Consulta
    indice        := 'IDCAIXA';

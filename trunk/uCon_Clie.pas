@@ -162,6 +162,7 @@ end;
 
 procedure TFcon_Cliente.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcon_Cliente);
    try
       pnImg.Picture.LoadFromFile(dmCad.cdsConfPASTASERVIDOR.ASString +'\immagini\cons.png');
    except

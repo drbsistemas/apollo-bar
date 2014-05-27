@@ -978,10 +978,10 @@ object Fcad_Caixa: TFcad_Caixa
         Height = 304
         Width = 357
         object cxGrid1: TcxGrid
-          Left = 3
-          Top = 15
-          Width = 351
-          Height = 279
+          Left = 2
+          Top = 18
+          Width = 353
+          Height = 284
           Hint = 'Grid de Dados'
           Align = alClient
           BevelOuter = bvNone
@@ -1053,10 +1053,10 @@ object Fcad_Caixa: TFcad_Caixa
         Height = 304
         Width = 605
         object cxGrid2: TcxGrid
-          Left = 3
-          Top = 15
-          Width = 599
-          Height = 279
+          Left = 2
+          Top = 18
+          Width = 601
+          Height = 284
           Hint = 'Grid de Dados'
           Align = alClient
           BevelOuter = bvNone

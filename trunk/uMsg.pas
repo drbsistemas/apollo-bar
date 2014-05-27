@@ -32,6 +32,8 @@ var
 
 implementation
 
+uses Rotinas;
+
 {$R *.dfm}
 
 procedure TFMsg.btnNaoClick(Sender: TObject);

@@ -298,6 +298,7 @@ procedure TFRel_Padrao.FormShow(Sender: TObject);
 var
    j, intTam: integer;
 begin
+   CarregaLyoutForm(Frel_Padrao);
    try
       pnImg.Picture.LoadFromFile(dmCad.cdsConfPASTASERVIDOR.ASString +'\immagini\Rel.png');
    except
