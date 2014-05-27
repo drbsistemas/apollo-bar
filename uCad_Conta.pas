@@ -707,6 +707,7 @@ end;
 
 procedure TFcad_Conta.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcad_Conta);
    FormAtivo     := Fcad_Conta;
    MudaPainel(0); // Consulta
 

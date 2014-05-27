@@ -80,6 +80,7 @@ end;
 
 procedure TFcon_Estoque.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcon_Estoque);
    Consulta;
 end;
 

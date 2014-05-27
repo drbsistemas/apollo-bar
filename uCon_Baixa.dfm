@@ -925,8 +925,8 @@ object Fcon_Baixa: TFcon_Baixa
         Transparent = True
       end
       object cxOpcao: TcxRadioGroup
-        Left = 3
-        Top = 225
+        Left = 2
+        Top = 233
         Align = alBottom
         Caption = 'Imprimir (F1)'
         Properties.Columns = 2
@@ -944,13 +944,13 @@ object Fcon_Baixa: TFcon_Baixa
         Style.TextColor = clInactiveCaptionText
         TabOrder = 1
         Height = 53
-        Width = 244
+        Width = 246
       end
       object DBGrid1: TDBGrid
-        Left = 3
-        Top = 18
-        Width = 244
-        Height = 207
+        Left = 2
+        Top = 21
+        Width = 246
+        Height = 212
         Align = alClient
         Color = 15855081
         DataSource = dsFpagto

@@ -18,6 +18,7 @@ uses
 
 type
   TFcon_Captcha = class(TForm)
+    Panel1: TPanel;
     Image1: TImage;
     Edit1: TcxTextEdit;
     btnOk: TcxButton;
@@ -36,6 +37,8 @@ var
   validapost: string;
 
 implementation
+
+uses Rotinas;
 
 {$R *.dfm}
 
@@ -91,9 +94,10 @@ end;
 
 procedure TFcon_Captcha.FormShow(Sender: TObject);
 begin
-  Edit1.Clear;
-  Edit1.SetFocus;
-  validapost := GeraImagem(Image1);
+   CarregaLyoutForm(Fcon_Captcha);
+   Edit1.Clear;
+   Edit1.SetFocus;
+   validapost := GeraImagem(Image1);
 end;
 
 procedure TFcon_Captcha.btnOkClick(Sender: TObject);
@@ -102,7 +106,7 @@ begin
      btnOk.Tag := 1 else
   begin
      btnok.Tag := 0;
-     MessageDlg('Código da Imagem não confere! Tente novamente!', mtWarning, [mbOK], 0);
+     Msg('Código da Imagem não confere! Tente novamente!', 'I');
   end;
   close;
 end;

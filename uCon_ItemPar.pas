@@ -96,6 +96,7 @@ end;
 
 procedure TFcon_ItemPar.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcon_ItemPar);
    FormAtivo     := Fcon_ItemPar;
    indice        := '';
    Consulta;

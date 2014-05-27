@@ -597,10 +597,9 @@ object Fcad_Empresa: TFcad_Empresa
       Style = 11
       TabOrder = 32
       TabWidth = 100
-      ClientRectBottom = 129
-      ClientRectLeft = 6
-      ClientRectRight = 648
-      ClientRectTop = 29
+      ClientRectBottom = 135
+      ClientRectRight = 654
+      ClientRectTop = 20
       object cxEspecificos: TcxTabSheet
         Caption = 'Dados Espec'#237'ficos'
         ImageIndex = 0

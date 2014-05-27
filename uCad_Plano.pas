@@ -250,6 +250,7 @@ end;
 
 procedure TFcad_Plano.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcad_Plano);
    MudaPainel(0); // Cadastro
    try
       pnImg.Picture.LoadFromFile(dmCad.cdsConfPASTASERVIDOR.ASString +'immagini\cons.png');

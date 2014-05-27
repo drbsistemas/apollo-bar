@@ -159,6 +159,7 @@ end;
 
 procedure TFcon_Baixa.FormShow(Sender: TObject);
 begin
+   CarregaLyoutForm(Fcon_Baixa);
 ///// organiza
    if StrTipoConta = 'R' then
       cxContas.Caption := 'CONTAS Á RECEBER' else

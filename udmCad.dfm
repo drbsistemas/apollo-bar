@@ -1740,4 +1740,12 @@ object dmCad: TdmCad
     Left = 144
     Top = 88
   end
+  object SQLMonitor1: TSQLMonitor
+    Active = True
+    AutoSave = True
+    FileName = 'D:\Sql.txt'
+    SQLConnection = SQLCon
+    Left = 8
+    Top = 48
+  end
 end

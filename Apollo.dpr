@@ -37,7 +37,8 @@ uses
   uEstoque in 'uEstoque.pas',
   LoginWindow_U in '..\..\Componentes\UserControl_2.18\Source\LoginWindow_U.pas' {frmLoginWindow},
   NFe_Util_2G_TLB in 'C:\Program Files (x86)\Borland\Delphi7\Imports\NFe_Util_2G_TLB.pas',
-  uMsg in 'uMsg.pas' {FMsg};
+  uMsg in 'uMsg.pas' {FMsg},
+  uCad_Pedido in 'uCad_Pedido.pas' {Fcad_Pedido};
 
 {$R *.res}
 
@@ -50,5 +51,6 @@ begin
   Application.CreateForm(TdmRel, dmRel);
   Application.CreateForm(TdmHistorico, dmHistorico);
   Application.CreateForm(TdmVenda, dmVenda);
+  Application.CreateForm(TFcad_Pedido, Fcad_Pedido);
   Application.Run;
 end.
